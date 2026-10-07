@@ -1,31 +1,1777 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Make video and audio accessible with captions, transcripts, descriptions, and usable players."><title>Media | UCLA Digital Accessibility</title><link rel="stylesheet" href="styles.css"></head><body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header"><div class="header-inner">
-<a class="site-brand" href="TLC website2.html" aria-label="UCLA Digital Accessibility home">
-        <img class="site-brand-logo" src="images/logo_UCLA_blue_boxed.png" alt="UCLA">
-        <span class="site-brand-text">
-          Teaching and Learning Center
-          <small>Resources and support</small>
-        </span>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Guidance for creating accessible audio and video media, including captions, transcripts, audio descriptions, recording, and accessible media tools." name="description"/>
+  <title>
+   Media | UCLA Digital Accessibility
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+  <style>
+   .accessible-accordion { border: 1px solid #d5d5d5; border-radius: 4px; margin: 0 0 1rem; background: #fff; }
+.accessible-accordion summary { cursor: pointer; padding: 1rem 1.25rem; font-weight: 700; color: #005587; list-style-position: inside; }
+.accessible-accordion summary:focus-visible { outline: 3px solid #ffd100; outline-offset: 2px; }
+.accessible-accordion[open] summary { border-bottom: 1px solid #d5d5d5; }
+.accessible-accordion-content { padding: 1rem 1.25rem; }
+  </style>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Skip to main content
+  </a>
+  <header class="site-header">
+   <div class="header-inner">
+    <a aria-label="UCLA Digital Accessibility home" class="site-brand" href="index.html">
+     <img alt="UCLA" class="site-brand-logo" src="images/logo_UCLA_blue_boxed.png"/>
+     <span class="site-brand-text">
+      Teaching and Learning Center
+      <small>
+       Resources and support
+      </small>
+     </span>
+    </a>
+    <nav aria-label="Primary navigation" class="primary-nav">
+     <ul>
+      <li>
+       <a href="index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="resources.html">
+        Resources
+       </a>
+      </li>
+      <li>
+       <a href="training.html">
+        Training
+       </a>
+      </li>
+      <li>
+       <a href="support.html">
+        Get Help
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+   <div class="site-search-row">
+    <search class="site-search" role="search">
+     <form action="search.html" method="get">
+      <label for="site-search-input">
+       Search the site
+      </label>
+      <input autocomplete="off" id="site-search-input" name="q" placeholder="Search the site" type="search"/>
+      <button type="submit">
+       Search
+      </button>
+     </form>
+    </search>
+   </div>
+  </header>
+ <section class="page-hero" aria-labelledby="page-title">
+  <div class="page-hero-inner">
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="accessible-course-materials1004.html">Accessible Course Materials</a>
+      <span aria-hidden="true">/</span>
+      <span>Media</span>
+    </div>
+    <span class="eyebrow">
+     Digital Accessibility
+    </span>
+    <h1 id="page-title">
+     Accessible Media
+    </h1>
+    <p>
+     Create and select audio and video that everyone can access, navigate, and understand.
+    </p>
+   </div>
+  </section>
+  <main id="main-content">
+   <section aria-labelledby="overview-heading" class="content-section">
+    <div>
+    </div>
+    <p>
+     Audio and video can make learning more engaging, demonstrate processes that are difficult to explain with text alone, and give students additional ways to interact with course content. However, media can also create significant barriers when important information is available through sound or visuals alone.
+    </p>
+    <p>
+     For example, a student who is Deaf or hard of hearing may not have access to information communicated only through a video's audio. A student who is blind or has low vision may miss important information that appears visually but is never communicated through the audio.
+    </p>
+    <p>
+     Creating accessible media means planning for these different ways of accessing information from the beginning.
+    </p>
+    <p>
+     In this module, you will learn how to create and select accessible audio and video for your courses. We will focus on captions, transcripts, audio description, visual information, and accessible media players, as well as strategies for reviewing automatically generated captions and other media accessibility features.
+    </p>
+    <p>
+     The goal is not simply to add captions after a video has been created. It is to think about accessibility throughout the media process—from planning and recording to reviewing, correcting, and publishing.
+    </p>
+    <hr/>
+    <h3>
+     Learning Objectives
+    </h3>
+    <p>
+     By the end of this module, you should be able to:
+    </p>
+    <ul>
+     <li>
+      Identify common accessibility barriers in audio and video content.
+     </li>
+     <li>
+      Explain the difference between captions, transcripts, and audio descriptions.
+     </li>
+     <li>
+      Create or provide accurate captions for prerecorded video.
+     </li>
+     <li>
+      Review and correct automatically generated captions.
+     </li>
+     <li>
+      Provide transcripts for audio-only content.
+     </li>
+     <li>
+      Determine when important visual information requires an audio description or equivalent alternative.
+     </li>
+     <li>
+      Incorporate verbal descriptions into recordings when appropriate.
+     </li>
+     <li>
+      Evaluate basic accessibility considerations when selecting third-party media.
+     </li>
+     <li>
+      Recognize the importance of an accessible media player.
+     </li>
+     <li>
+      Incorporate media accessibility into the content-creation workflow.
+     </li>
+    </ul>
+   </section>
+   <section aria-labelledby="media-heading" class="content-section">
+    <div class="section-heading">
+     <h2 id="media-heading">
+      How to Make Media More Accessible
+     </h2>
+    </div>
+    <details class="accessible-accordion">
+     <summary>
+      Blindspot (A Film)
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       I would love for you to watch the following film. I really enjoyed it and think it's enlightening how blind individuals navigate the world, think about being blind, and what others think about them. It's also interesting as a sighted viewer to pick up on all the items in Jamil's and Tamesha's worlds that are not accessible to them. The film is also amazing because it has captioning, a transcript, and is signed!
+      </p>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Understanding Accessible Media
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       There are three types of media addressed by WCAG and Section 508 standards:
+      </p>
+      <ul>
+       <li>
+        Audio only
+       </li>
+       <li>
+        Media only
+       </li>
+       <li>
+        Synchronized media (audio and video)
+       </li>
+      </ul>
+      <p>
+       Each type of media may require a different accessibility solution. Providing equivalent information in another format helps remove barriers created by audio-only or video-only content.
+      </p>
+      <p>
+       Why Does Accessible Media Matter?
+      </p>
+      <p>
+       Providing captions or transcripts can:
+      </p>
+      <ul>
+       <li>
+        Ensure all learners can access audio content.
+       </li>
+       <li>
+        Support learning and comprehension.
+       </li>
+       <li>
+        Improve review and note-taking.
+       </li>
+       <li>
+        Allow learners to search and revisit content.
+       </li>
+       <li>
+        Support self-paced studying.
+       </li>
+       <li>
+        Provide multiple means of representation.
+       </li>
+       <li>
+        Give learners flexibility and choice.
+       </li>
+       <li>
+        Support digital accessibility compliance.
+       </li>
+       <li>
+        Remove barriers created by audio-only content.
+       </li>
+       <li>
+        Provide equitable access for all users.
+       </li>
+      </ul>
+      <p>
+       Captions and transcripts can benefit many learners, including deaf or hard of hearing students, multilingual learners, students with auditory processing challenges, and students who are learning in environments where listening may be difficult.
+      </p>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Ways to Make Media Accessible
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       There are several mechanisms for making media accessible.
+      </p>
+      <h3>
+       Transcripts
+      </h3>
+      <p>
+       A transcript provides a text-based description of audio content. It can include:
+      </p>
+      <ul>
+       <li>
+        Spoken dialogue
+       </li>
+       <li>
+        Narration
+       </li>
+       <li>
+        Meaningful sounds
+       </li>
+       <li>
+        Musical cues
+       </li>
+      </ul>
+      <p>
+       Transcripts provide learners with access to the information conveyed through audio in a text format.
+      </p>
+      <h3>
+       Text Descriptions
+      </h3>
+      <p>
+       A
+       <strong>
+        text description
+       </strong>
+       describes video-only content, including:
+      </p>
+      <ul>
+       <li>
+        On-screen action
+       </li>
+       <li>
+        On-screen text
+       </li>
+       <li>
+        Changes of scene
+       </li>
+       <li>
+        Changes in context
+       </li>
+      </ul>
+      <p>
+       Unlike captions, a text description is not synchronized with the media.
+      </p>
+      <h3>
+       Captions
+      </h3>
+      <p>
+       Captions provide a synchronized representation of:
+      </p>
+      <ul>
+       <li>
+        Spoken dialogue
+       </li>
+       <li>
+        Important sound cues
+       </li>
+       <li>
+        Speaker identification
+       </li>
+      </ul>
+      <p>
+       Captions are synchronized with the media and may be either open or closed.
+      </p>
+      <ul>
+       <li>
+        Open captions are part of the video stream and are always displayed.
+       </li>
+       <li>
+        Closed captions are a separate text stream that can be turned on and off and may allow users to adjust features.
+       </li>
+      </ul>
+      <p>
+       Important: Auto-generated captions must be reviewed for accuracy.
+      </p>
+      <h3>
+       Audio Descriptions
+      </h3>
+      <p>
+       Synchronized audio descriptions provide narration of important visual information for audience members with visual impairments.
+      </p>
+      <p>
+       Audio descriptions may include:
+      </p>
+      <ul>
+       <li>
+        Actions
+       </li>
+       <li>
+        Changes of scene
+       </li>
+       <li>
+        Important on-screen text
+       </li>
+      </ul>
+      <p>
+       They can be provided as a separate audio track or inserted into natural pauses in the dialogue. Audio descriptions are synchronized with the video.
+      </p>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Captions
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       <strong>
+        Captions
+       </strong>
+       provide a synchronized text alternative for meaningful audio information in video.
+      </p>
+      <p>
+       Captions should communicate more than spoken words when other sounds contribute meaning.
+      </p>
+      <p>
+       Depending on the content, captions may need to identify:
+      </p>
+      <ul>
+       <li>
+        Dialogue
+       </li>
+       <li>
+        Narration
+       </li>
+       <li>
+        Speaker changes
+       </li>
+       <li>
+        Meaningful sound effects
+       </li>
+       <li>
+        Relevant music
+       </li>
+       <li>
+        Other important auditory information
+       </li>
+      </ul>
+      <p>
+       For example, if a video shows a demonstration and an alarm sounds to indicate that a process has finished, the alarm communicates information.
+      </p>
+      <p>
+       A caption such as:
+      </p>
+      <p>
+       <strong>
+        [alarm sounds]
+       </strong>
+      </p>
+      <p>
+       can make that information available to someone who cannot hear it.
+      </p>
+      <hr/>
+      <h3>
+       Captions Are Not the Same as Subtitles
+      </h3>
+      <p>
+       Subtitles traditionally provide a text version or translation of spoken dialogue for viewers who can hear the other audio information. These may be used in foreign films.
+      </p>
+      <p>
+       Captions are designed to provide access to the meaningful audio content needed to understand the media.
+      </p>
+      <p>
+       That may include dialogue as well as:
+      </p>
+      <ul>
+       <li>
+        Speaker identification
+       </li>
+       <li>
+        Meaningful sound effects
+       </li>
+       <li>
+        Relevant music
+       </li>
+       <li>
+        Other non-speech audio
+       </li>
+      </ul>
+      <p>
+       For accessibility purposes, instructors should ensure that the text alternative provides access to the
+       <strong>
+       </strong>
+       meaningful audio information, not simply the spoken words.
+      </p>
+      <hr/>
+      <h3>
+       Just because there are captions doesn't mean they are effective.
+      </h3>
+      <p>
+       Having captions available does not necessarily mean that the captions are effective.
+      </p>
+      <p>
+       Captions should be:
+      </p>
+      <ul>
+       <li>
+        Accurate. The captions should accurately represent what is being said. Names, specialized terminology, acronyms, technical vocabulary, and discipline-specific language require particular attention.
+       </li>
+       <li>
+        Synchronized. Captions should appear at approximately the same time as the corresponding audio. Captions that appear too early or too late can make the content difficult to follow.
+       </li>
+       <li>
+        Complete. Meaningful spoken and non-spoken audio should be represented.
+       </li>
+       <li>
+        Readable. Captions should remain on screen long enough to be read and should be presented in a way that does not unnecessarily obscure important visual information.
+       </li>
+       <li>
+        Meaningful. Punctuation, speaker identification, and relevant sound information should help the viewer understand what is happening.
+       </li>
+      </ul>
+      <hr/>
+      <h3>
+       Automatically Generated Captions
+      </h3>
+      <p>
+       Many video platforms can generate captions automatically.
+      </p>
+      <p>
+       Automatic captioning can be an excellent starting point, but automatically generated captions should be reviewed before media is provided to students.
+      </p>
+      <p>
+       Automatic systems may incorrectly caption:
+      </p>
+      <ul>
+       <li>
+        Names
+       </li>
+       <li>
+        Technical terminology
+       </li>
+       <li>
+        Acronyms
+       </li>
+       <li>
+        Discipline-specific vocabulary
+       </li>
+       <li>
+        Speakers with overlapping dialogue
+       </li>
+       <li>
+        Audio with background noise
+       </li>
+       <li>
+        Words that sound alike
+       </li>
+      </ul>
+      <p>
+       Consider the difference between:
+      </p>
+      <p>
+       Automatic caption:
+       <br/>
+       <em>
+        S
+       </em>
+       tudents should review the excess ability report.
+      </p>
+      <p>
+       and
+      </p>
+      <p>
+       Corrected caption:
+       <br/>
+       Students should review the accessibility report.
+      </p>
+      <p>
+       A single incorrect word can substantially change the meaning.
+      </p>
+      <hr/>
+      <h3>
+       Plan for Captions Before Recording
+      </h3>
+      <p>
+       Captioning becomes easier when accessibility is considered during production.
+      </p>
+      <p>
+       Before recording:
+      </p>
+      <ul>
+       <li>
+        Prepare a script or detailed notes when appropriate.
+       </li>
+       <li>
+        Identify specialized terminology that may be difficult for automatic captioning systems.
+       </li>
+       <li>
+        Use a quality microphone.
+       </li>
+       <li>
+        Reduce unnecessary background noise.
+       </li>
+       <li>
+        Encourage speakers to speak clearly.
+       </li>
+       <li>
+        Avoid having multiple people speak simultaneously when possible.
+       </li>
+      </ul>
+      <p>
+       Good recording practices can improve both the original media and the quality of automatically generated captions.
+      </p>
+      <hr/>
+      <h3>
+       Review Before You Publish
+      </h3>
+      <p>
+       When using automatically generated captions:
+      </p>
+      <ol start="1">
+       <li>
+        Generate the captions.
+       </li>
+       <li>
+        Review them while listening to the recording.
+       </li>
+       <li>
+        Correct inaccurate words.
+       </li>
+       <li>
+        Add appropriate punctuation.
+       </li>
+       <li>
+        Identify speakers when necessary.
+       </li>
+       <li>
+        Add meaningful non-speech audio when needed.
+       </li>
+       <li>
+        Check synchronization.
+       </li>
+       <li>
+        Review the finished captions before publishing.
+       </li>
+      </ol>
+      <p>
+       Think of automatic captions as a draft, not the finished accessibility solution.
+      </p>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Live Captioning
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       Live captioning in Zoom helps ensure that Deaf and hard of hearing students can fully participate in synchronous online class sessions. During live captioning, a designated captioner provides real-time text of spoken content so students can follow lectures, discussions, and other instructional activities as they occur.
+      </p>
+      <p>
+       While the Center for Accessible Education (CAE) typically coordinates primary captioning accommodations such as StreamText services, Zoom live captioning may be used as a backup or supplemental accommodation when needed.
+      </p>
+      <p>
+       Successful implementation requires collaboration between the student, faculty member, CAE, and assigned live captioner. Faculty are responsible for enabling Zoom captioning settings and assigning captioning permissions during class, while CAE coordinates logistics and staffing. Students must notify both the instructor and CAE of accommodation needs as early as possible.
+      </p>
+      <p>
+       Providing live captions supports accessibility, equitable participation, and compliance with ADA and WCAG accessibility standards while improving access for many learners in synchronous online environments.
+      </p>
+      <h3>
+       Important Note
+      </h3>
+      <p>
+       Live Zoom captioning is considered a backup accommodation for Deaf or hard of hearing students. The primary accommodation is typically StreamText services coordinated through the Center for Accessible Education (CAE). This service does not require additional action from the instructor once arranged by the CAE.
+      </p>
+      <h3>
+       Types of Accommodations
+      </h3>
+      <p>
+       Accessibility accommodations for Deaf and hard of hearing students are individualized and determined through the Center for Accessible Education (CAE) based on each student’s specific access needs. Not all students will use the same accommodation, and the services provided will depend on the accommodations officially outlined by the CAE.
+      </p>
+      <p>
+       There are several common types of communication access accommodations that may be used in instructional settings. In in-person classes, a student may be assigned a stenographer or live captioner who provides real-time captions during lectures and discussions. In synchronous online courses or Zoom sessions, a live captioner may be assigned to provide real-time captions directly within the Zoom platform. In some cases, students may also receive StreamText services coordinated by the CAE, which provide professional real-time captioning through a separate captioning platform.
+      </p>
+      <p>
+       These accommodations are designed to ensure students have equitable access to spoken content, class discussions, and instructional materials. Faculty collaboration is an important part of the accommodation process and may include enabling captioning settings, providing access to course materials in advance, or coordinating with captioning professionals assigned by the CAE.
+      </p>
+      <h3>
+       In-Person Accommodation
+      </h3>
+      <ul>
+       <li>
+        A stenographer provides live captions during class sessions.
+       </li>
+      </ul>
+      <h3>
+       Online Accommodation
+      </h3>
+      <ul>
+       <li>
+        A live captioner is assigned to provide captions during Zoom sessions.
+       </li>
+      </ul>
+      <h3>
+       Collaboration Required From
+      </h3>
+      <ul>
+       <li>
+        Faculty/Lecturer
+       </li>
+       <li>
+        Student
+       </li>
+       <li>
+        CAE
+       </li>
+       <li>
+        Assigned Live Captioner
+        <a href="https://support.microsoft.com/en-us/office/video-improve-accessibility-with-heading-styles-68f1eeff-6113-410f-8313-b5d382cc3be1" target="_blank">
+         Links to an external site.
+        </a>
+       </li>
+      </ul>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Transcripts
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       A transcript is a text version of the meaningful audio information contained in media.
+      </p>
+      <p>
+       Transcripts are especially important for audio-only content, such as:
+      </p>
+      <ul>
+       <li>
+        Podcasts
+       </li>
+       <li>
+        Recorded interviews
+       </li>
+       <li>
+        Audio lectures
+       </li>
+       <li>
+        Audio announcements
+       </li>
+      </ul>
+      <p>
+       A transcript should communicate the information a student needs to obtain the equivalent content from the recording.
+      </p>
+      <p>
+       Depending on the media, that can include:
+      </p>
+      <ul>
+       <li>
+        Spoken words
+       </li>
+       <li>
+        Speaker identification
+       </li>
+       <li>
+        Meaningful sound effects
+       </li>
+       <li>
+        Other relevant auditory information
+       </li>
+      </ul>
+      <p>
+       Transcripts can also benefit students who prefer reading, want to search for particular information, or need to review content quickly.
+      </p>
+      <hr/>
+      <h3>
+       Captions vs. Transcripts
+      </h3>
+      <table border="1">
+       <tbody>
+        <tr>
+         <th scope="row">
+          Captions
+         </th>
+         <th scope="row">
+          Transcripts
+         </th>
+        </tr>
+        <tr>
+         <td>
+          Appear with video
+         </td>
+         <td>
+          Exist separately from the media
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Are synchronized with the audio
+         </td>
+         <td>
+          Usually are not synchronized
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Allow viewers to read while watching
+         </td>
+         <td>
+          Allow users to read the content independently
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Provide access to meaningful audio
+         </td>
+         <td>
+          Provide a text version of meaningful audio information
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Describing Visual Information
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       Whenever possible, instructors can reduce the need for separate audio description by verbally communicating important visual information while recording.
+      </p>
+      <p>
+       Instead of just displaying information on a slide, be sure to describe what is on the slide.
+      </p>
+      <p>
+       <br/>
+       For example, when displaying an equation, instead of saying "The graph is shown on the slide", say  "The graph shows enrollment increasing from approximately 4,000 students in 2020 to 6,000 students in 2025."
+       <br/>
+       <br/>
+       Another example: Instead of saying "Notice what happens". Instead, explain what happens.
+       <br/>
+       <br/>
+       This approach is called integrated description because meaningful visual information is incorporated naturally into the narration.
+      </p>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Audio Description
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       As was mentioned previously, when teaching or narrating videos try to describe visual information. If all of the visual information is adequately described this will oftentimes eliminate the need for audio descriptions.
+      </p>
+      <p>
+       If visual information cannot be incorporated into the existing narration, your video will require audio descriptions.
+       <br/>
+       <br/>
+       Audio description provides spoken information about important visual content that is not already communicated through the video's audio, and are generally inserted during natural pauses in dialogue or narration. Audio Describing is an art, and I do not recommend audio describing your videos. There are many great professional audio describers in the Los Angeles area who can help you.
+      </p>
+      <p>
+       Depending on the media, an audio description might communicate:
+      </p>
+      <ul>
+       <li>
+        Important actions
+       </li>
+       <li>
+        Changes in setting
+       </li>
+       <li>
+        On-screen text
+       </li>
+       <li>
+        Facial expressions when relevant to meaning
+       </li>
+       <li>
+        Demonstrations
+       </li>
+       <li>
+        Visual relationships
+       </li>
+       <li>
+        Other information necessary to understand the content
+       </li>
+      </ul>
+      <p>
+       <a href="https://www.hyperfixedpod.com/listen/hyperfixed/chris-s-watchlist" target="_blank">
+       </a>
+       <a href="https://kaf.bruinlearn.ucla.edu/media/t/1_qks3zoic/416840172" target="_blank" title="Link">
+        This fascinating episode of Hyperfixed podcast
+       </a>
+       talks about audio descriptions: why there aren't audio descriptions on all video, why some videos have audio descriptions NOW, and lots more. You will also get to hear what audio descriptions sound like.
+      </p>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Recording Media
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       Accessibility should be considered while creating media—not only after the recording is complete.
+      </p>
+      <h3>
+       Recording Best Practices
+      </h3>
+      <p>
+       When recording instructional media:
+      </p>
+      <ul>
+       <li>
+        Come prepared and practice your material.
+       </li>
+       <li>
+        Know the material you are presenting.
+       </li>
+       <li>
+        Pause rather than relying on filler words such as "um," "ahh," "you know," or "like."
+       </li>
+       <li>
+        Look at the camera when appropriate.
+       </li>
+       <li>
+        Show enthusiasm during your presentation.
+       </li>
+       <li>
+        Describe what you are presenting.
+       </li>
+       <li>
+        If you make a significant mistake, identify it in the recording so it can be edited later.
+       </li>
+       <li>
+        Relax and have fun.
+       </li>
+      </ul>
+      <h3>
+       Describe What You Are Showing
+      </h3>
+      <p>
+       When presenting graphics, tables, images, websites, or other media,
+       <strong>
+        describe the content being shown
+       </strong>
+       .
+      </p>
+      <p>
+       For example, instead of referring to something as "this" or "here," identify what is being shown and provide the information learners need to understand it.
+      </p>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Recording in TLC Studios
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       As a participant in this workshop, you have access to TLC's professional studios in Slichter Hall and CHS, as well as a team of videographers and editors. You may choose to utilize this service or record your materials yourself.
+      </p>
+      <h3>
+       Preparation and Time Commitment
+      </h3>
+      <p>
+       If you are interested in recording your lectures in one of the TLC's professional studios, it's good to first consider the time commitment that this will require.
+      </p>
+      <h3>
+       Before Recording (Preproduction)
+      </h3>
+      <ul>
+       <li>
+        Pick a studio
+       </li>
+       <li>
+        Create a media plan
+       </li>
+       <li>
+        Prepare scripts, branding slides and graphics
+       </li>
+       <li>
+        Consult with media producer
+       </li>
+      </ul>
+      <p>
+       Before you are ready to reserve recording time, you will need to complete a media plan, which details the topics and estimated time for each video in each module of your course. You will complete this plan with your Instructional Designer, and you can read more about this on the
+       <a href="https://bruinlearn.ucla.edu/courses/226330/pages/creating-a-media-plan" title="Creating a Media Production Plan">
+        Creating a Media Production Plan
+       </a>
+       page.
+      </p>
+      <p>
+       We have created a TLC template for the slides in your video lectures. This template has been designed with UCLA branding and accessibility in mind. You can find the template and make a copy of it here:
+       <a href="https://docs.google.com/presentation/d/1bIppz5X-CwA9FKM9pw024bYHXVaPjGHm/edit#slide=id.p1" target="_blank">
+        University_Blue_Template_Sharing(Links to an external site)
+       </a>
+       . The slides will be shared with the media team to incorporate into your lecture videos. If you do not use this template, we will need to check your slides for accessibility before recording.
+      </p>
+      <p>
+       Once your media plan and slides are complete, you can schedule recording times.
+      </p>
+      <h3>
+       Recording
+      </h3>
+      <ul>
+       <li>
+        Develop multimedia content
+       </li>
+       <li>
+        Record in studio
+       </li>
+      </ul>
+      <p>
+       You will first shoot a test recording in the studio, which will take about 30 to 45 minutes. You can then begin recording your lectures. The time required is approximately 1.5 to 2 hours per hour of lecture content.
+      </p>
+      <h3>
+       After Recording (Postproduction by the media team)
+      </h3>
+      <ul>
+       <li>
+        Editing:
+       </li>
+       <li>
+        Adding graphics and special effects
+       </li>
+       <li>
+        Adding captions and transcripts
+       </li>
+      </ul>
+      <p>
+       You will have the opportunity to review the media team's edits and provide notes.
+      </p>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Creating a Media Plan
+     </summary>
+     <div class="accessible-accordion-content">
+      <h3>
+       Media Plan
+      </h3>
+      <p>
+       A Media Plan includes the plans of lectures and media that will be created and developed for a course. The media includes but is not limited to video lectures, video resources, images, presentation slides, animations, and others.
+      </p>
+      <h3>
+       Video Lectures
+      </h3>
+      <p>
+       The media plan should include how the lecture will be prepared and distributed in the proposed modality. Please consider the following guiding questions when planning the video lectures, and consult with TLC’s Media Production team.
+      </p>
+      <h3>
+       Synchronous Lectures and Online Conferencing Tools
+      </h3>
+      <ol>
+       <li>
+        Will the lectures be mainly distributed through live/synchronous online sessions? If so:
+        <ul>
+         <li>
+          Will Zoom be the only online conferencing tool for lecturing?
+         </li>
+         <li>
+          If not, please list all the online conferencing tools that will be used to distribute live/synchronous lectures.
+         </li>
+        </ul>
+       </li>
+       <li>
+        What are the schedules of the synchronous live lectures?
+        <ul>
+         <li>
+          Please state the information clearly in the course syllabus and in the course site if BruinLearn is used.
+         </li>
+        </ul>
+       </li>
+       <li>
+        What are the solutions for students who cannot join the synchronous lecture time?
+        <ul>
+         <li>
+          Will an alternative format of lecturing be provided? Please state clearly in the syllabus and in the course site.
+         </li>
+        </ul>
+       </li>
+       <li>
+        Will a recording be provided and shared?
+        <ul>
+         <li>
+          Please list out the place where students can find the recording in the syllabus and in the course site.
+         </li>
+        </ul>
+       </li>
+      </ol>
+      <h3>
+       Pre-Recorded Lectures and Media Production
+      </h3>
+      <ol>
+       <li>
+        <p>
+         Will pre-recorded lectures be prepared as the main solution for lecturing in the proposed teaching modality? If so:
+        </p>
+        <ul>
+         <li>
+          How does the instructor plan to record/film the lectures? Will it be with TLC’s Media Production team or at home/office?
+         </li>
+         <li>
+          What software will be used for the pre-recorded lectures if the instructor does the recording? Will it be via Zoom, Camtasia, or other video tools/software?
+         </li>
+        </ul>
+       </li>
+       <li>
+        <p>
+         How will the video lectures be organized? Please consider the following questions when planning:
+        </p>
+        <ul>
+         <li>
+          How many video lectures will be pre-recorded?
+         </li>
+         <li>
+          The average length of each video lecture.
+         </li>
+         <li>
+          How much time commitment will be needed to complete.
+         </li>
+         <li>
+          How to segment/chunk video lectures (e.g., considering interviews, guests, and panels).
+         </li>
+         <li>
+          How to group video lectures, such as by theme, concepts, by topics, etc.
+         </li>
+        </ul>
+       </li>
+      </ol>
+      <h3>
+       Mixed Media and Supplementary Materials
+      </h3>
+      <ol>
+       <li>
+        <p>
+         Will there be a mix of live/synchronous lecturing and pre-recorded lectures? If so:
+        </p>
+        <ul>
+         <li>
+          What will be synchronous? What will be pre-recorded? Please specify the reasons for the mix.
+         </li>
+        </ul>
+       </li>
+       <li>
+        <p>
+         Will there be other media as supplementary materials? If so:
+        </p>
+        <ul>
+         <li>
+          What are the main sources of those media? Please list the sources of those external media, such as YouTube, TedTalk, etc.
+         </li>
+         <li>
+          What is the purpose of using the other media in the course? Please explain the purposes of adopting any external media in the course.
+         </li>
+        </ul>
+       </li>
+      </ol>
+      <h3>
+       Media Plan Template and Examples
+      </h3>
+      <p>
+       Here is a template for the media plan that you can download and utilize:
+       <a href="#additional-resources" title="Media Plan Template.docx">
+        Media Plan Template
+       </a>
+      </p>
+      <p>
+       As you consider your own media plan, take a look at these examples prepared by previous workshop participants:
+      </p>
+      <ul>
+       <li>
+        <a href="#additional-resources" title="SAMPLE Media Plan - Probability and Statistics for Engineers.pdf">
+         SAMPLE Media Plan - Probability and Statistics for Engineers
+        </a>
+       </li>
+       <li>
+        <a href="#additional-resources" title="SAMPLE Media Plan - Foundational Myths.pdf">
+         SAMPLE Media Plan - Foundational Myths
+        </a>
+       </li>
+      </ul>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Additional Recording Tips
+     </summary>
+     <div class="accessible-accordion-content">
+      <h3>
+       Overview
+      </h3>
+      <p>
+       A common technique when designing an online/hybrid course is incorporating a variety of media options to enhance engagement and cater to diverse learning preferences. Utilizing video lectures, interactive presentations, and multimedia content can make complex concepts more accessible and engaging. Integrating audio recordings and podcasts provides flexibility for auditory learners, while infographics and interactive diagrams can help visualize key information. Additionally, incorporating tools like discussion boards and collaborative platforms allows for dynamic interaction and peer feedback. By thoughtfully selecting and combining these media options, you can create a rich and interactive learning experience that meets the needs of all students.
+      </p>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Working with YouTube Videos in Kaltura
+     </summary>
+     <div class="accessible-accordion-content">
+      <h3>
+       Workflow for bringing a YouTube video into Bruin Learn
+      </h3>
+      <p>
+       For a
+       <strong>
+        YouTube video you don't own
+       </strong>
+       , UCLA's current workflow is:
+      </p>
+      <ul>
+       <li>
+        Grab the public YouTube video URL
+       </li>
+       <li>
+        Add the URL to Kaltura
+       </li>
+       <li>
+        Embed the Kaltura entry into the Bruin Learn course. Note: Don't embed the YouTube video directly into Bruin Learn! The reason for this is that YouTube videos embedded directly may display YouTube-controlled ads. Kaltura can filter those ads, although since they are YouTube controlled, filtering isn't guaranteed.
+       </li>
+      </ul>
+      <h3>
+       Captioning and Transcripts in Kaltura
+      </h3>
+      <p>
+       Uploaded videos into Kaltura receive automatically generated captions/transcripts. Remember, you must review both of these items for accuracy.
+      </p>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Working with YouTube Videos in Panopto
+     </summary>
+     <div class="accessible-accordion-content">
+      <h3>
+       Which schools at UCLA use Panopto?
+      </h3>
+      <ul>
+       <li>
+        Law
+       </li>
+       <li>
+        Extension
+       </li>
+       <li>
+        Medical
+       </li>
+       <li>
+        Anderson School of Management
+       </li>
+      </ul>
+      <p>
+       Additionally, BruinCast uses Panopto for recording in-person class meetings.
+      </p>
+      <hr/>
+      <h3>
+       Workflow for Bringing a YouTube Video Into Panopto
+      </h3>
+      <ul>
+       <li>
+        Be sure automatic captioning is enabled, and review for accuracy.
+       </li>
+       <li>
+        YouTube videos are treated as externally hosted content.
+       </li>
+       <li>
+        Ads will appear in the videos so it's a best practice to add an ad disclaimer.
+       </li>
+      </ul>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Zoom Meetings
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       Zoom includes built-in features to make meetings accessible for people with hearing, vision, and mobility needs.
+      </p>
+      <h3>
+       Closed Captioning
+      </h3>
+      <ul>
+       <li>
+        Zoom meetings and webinars automatically provide live captioning.
+       </li>
+       <li>
+        Manual captions can also be typed during meetings.
+       </li>
+      </ul>
+      <h3>
+       Transcripts
+      </h3>
+      <p>
+       Refer to
+       <a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0085682" target="_blank">
+        this Zoom page for transcript support.
+       </a>
+      </p>
+      <h3>
+       Display Adjustments
+      </h3>
+      <ul>
+       <li>
+        Dark mode can be enabled on the display.
+       </li>
+       <li>
+        Chat and caption font sizes can be adjusted.
+       </li>
+      </ul>
+      <h3>
+       Best Practices
+      </h3>
+      <ul>
+       <li>
+        Use clear, non-motion virtual backgrounds.
+       </li>
+       <li>
+        Describe visual content.
+       </li>
+       <li>
+        Email or provide within the course important information that was provided in the chat in case it was missed.
+       </li>
+       <li>
+        If a sign language interpreter is used, use the spotlight feature to highlight them.
+       </li>
+      </ul>
+      <h3>
+       Keyboard Shortcuts
+      </h3>
+      <h3>
+       Meeting
+      </h3>
+      <ul>
+       <li>
+        <strong>
+         Ctrl + Alt + Shift
+        </strong>
+        : Change focus to Zoom Meeting controls (on top when sharing screen)
+       </li>
+       <li>
+        <strong>
+         PageUp
+        </strong>
+        : View the previous page of video participants in gallery view
+       </li>
+       <li>
+        <strong>
+         PageDown
+        </strong>
+        : View the next page of video participants in gallery view
+       </li>
+       <li>
+        <strong>
+         Alt
+        </strong>
+        : Toggle the option
+        <strong>
+         Always show meeting controls
+        </strong>
+        in
+        <strong>
+         General
+        </strong>
+        settings
+       </li>
+       <li>
+        <strong>
+         Alt + F1
+        </strong>
+        : Switch to Speaker view
+       </li>
+       <li>
+        <strong>
+         Alt + F2
+        </strong>
+        : Switch to Gallery view
+       </li>
+       <li>
+        <strong>
+         Alt + F4
+        </strong>
+        : Close the current window
+       </li>
+       <li>
+        <strong>
+         Alt + V
+        </strong>
+        : Start/stop video
+       </li>
+       <li>
+        <strong>
+         Alt + A
+        </strong>
+        : Mute/unmute audio
+       </li>
+       <li>
+        <strong>
+         Alt + M
+        </strong>
+        : Mute/unmute audio for everyone except host (for host only)
+       </li>
+       <li>
+        <strong>
+         Alt + S
+        </strong>
+        : Open share screen window or stop screen share if already sharing
+        <br/>
+        <strong>
+         Note
+        </strong>
+        : This will only work when meeting control toolbar has focus.
+       </li>
+       <li>
+        <strong>
+         Alt + Shift + S
+        </strong>
+        : Show/hide windows and applications available to share
+        <br/>
+        <strong>
+         Note
+        </strong>
+        : This will only work when meeting control toolbar has focus.
+       </li>
+       <li>
+        <strong>
+         Alt + T
+        </strong>
+        : Pause or resume screen share
+        <br/>
+        <strong>
+         Note
+        </strong>
+        : This will only work when meeting control toolbar has focus.
+       </li>
+       <li>
+        <strong>
+         Alt + R
+        </strong>
+        : Start/stop computer recording
+       </li>
+       <li>
+        <strong>
+         Alt + C
+        </strong>
+        : Start/stop cloud recording
+       </li>
+       <li>
+        <strong>
+         Alt + P
+        </strong>
+        : Pause/resume recording
+       </li>
+       <li>
+        <strong>
+         Alt + N
+        </strong>
+        : Switch camera
+       </li>
+       <li>
+        <strong>
+         Alt + F
+        </strong>
+        : Enter or exit full screen mode
+       </li>
+       <li>
+        <strong>
+         Alt + H
+        </strong>
+        : Show/hide in-meeting chat panel
+       </li>
+       <li>
+        <strong>
+         Alt + U
+        </strong>
+        : Show/hide participants panel
+       </li>
+       <li>
+        <strong>
+         Alt + I
+        </strong>
+        : Open invite window
+       </li>
+       <li>
+        <strong>
+         Alt + Shift + I
+        </strong>
+        : Copy invitation link
+       </li>
+       <li>
+        <strong>
+         Alt + Y
+        </strong>
+        : Raise/lower hand
+       </li>
+       <li>
+        <strong>
+         Alt + Q
+        </strong>
+        : Display prompt to end or leave meeting
+       </li>
+       <li>
+        <strong>
+         Alt + Shift + R
+        </strong>
+        : Begin remote control
+       </li>
+       <li>
+        <strong>
+         Alt + Shift + G
+        </strong>
+        : Revoke/give up remote control permission
+       </li>
+       <li>
+        <strong>
+         Ctrl + 2
+        </strong>
+        : Read active speaker name
+       </li>
+       <li>
+        <strong>
+         Ctrl + Alt + Shift + H
+        </strong>
+        : Show/hide floating meeting controls
+       </li>
+       <li>
+        <strong>
+         Ctrl + +
+        </strong>
+        : Increase chat display size
+       </li>
+       <li>
+        <strong>
+         Ctrl + -
+        </strong>
+        : Decrease chat display size
+       </li>
+       <li>
+        <strong>
+         Alt + Shift + E
+        </strong>
+        : Focus input field (only usable when in chat window)
+       </li>
+       <li>
+        <strong>
+         Ctrl + Shift + U
+        </strong>
+        : Focus last received parent message in the chat history (only usable when in the chat window)
+       </li>
+       <li>
+        <strong>
+         Control + L
+        </strong>
+        : Focus list of chats (only usable when in the chat window)
+       </li>
+       <li>
+        <strong>
+         Ctrl + Shift + N
+        </strong>
+        : Jump to start of unread messages (only usable when in the chat window)
+       </li>
+       <li>
+        <strong>
+         Ctrl + N
+        </strong>
+        : Start new chat with meeting participants (only usable when in the chat window)
+       </li>
+       <li>
+        <strong>
+         Ctrl + Shift + O
+        </strong>
+        : Open the AI chat panel in a meeting
+       </li>
+       <li>
+        <strong>
+         Ctrl + Shift + Y
+        </strong>
+        : Open Reactions panel
+        <ul>
+         <li>
+          <strong>
+           Alt + Shift + 4
+          </strong>
+          : Send audible clap
+         </li>
+         <li>
+          <strong>
+           Alt + Shift + 5
+          </strong>
+          : Send thumbs up
+         </li>
+         <li>
+          <strong>
+           Alt + Shift + 6
+          </strong>
+          : Send heart
+         </li>
+         <li>
+          <strong>
+           Alt + Shift + 7
+          </strong>
+          : Send joy
+         </li>
+         <li>
+          <strong>
+           Alt + Shift + 8
+          </strong>
+          : Send open mouth
+         </li>
+         <li>
+          <strong>
+           Alt + Shift + 9
+          </strong>
+          : Send tada
+         </li>
+        </ul>
+       </li>
+      </ul>
+      <h3>
+       Chat
+      </h3>
+      <ul>
+       <li>
+        <strong>
+         Alt + Shift + T
+        </strong>
+        : Screenshot
+       </li>
+       <li>
+        <strong>
+         Ctrl + W
+        </strong>
+        : Hide current chat session
+       </li>
+       <li>
+        <strong>
+         Ctrl + Up
+        </strong>
+        : Go to previous chat
+       </li>
+       <li>
+        <strong>
+         Ctrl + Down
+        </strong>
+        : Go to next chat
+       </li>
+       <li>
+        <strong>
+         Alt + Left
+        </strong>
+        : Back in chat history
+       </li>
+       <li>
+        <strong>
+         Alt + Right
+        </strong>
+        : Forward in chat history
+       </li>
+       <li>
+        <strong>
+         Ctrl + N
+        </strong>
+        : Start a new chat
+       </li>
+       <li>
+        <strong>
+         Ctrl + L
+        </strong>
+        : Focus to list of all chats and channels
+       </li>
+       <li>
+        <strong>
+         Ctrl + Shift + U
+        </strong>
+        : Focus keyboard to latest message in current group chat or channel
+       </li>
+       <li>
+        <strong>
+         Ctrl + Alt + I
+        </strong>
+        : Add member to current group chat or channel
+       </li>
+       <li>
+        <strong>
+         Alt + N
+        </strong>
+        : Jump to start of new messages in the current group chat or channel
+       </li>
+       <li>
+        <strong>
+         Ctrl + K
+        </strong>
+        : Insert a hyperlink
+       </li>
+      </ul>
+     </div>
+    </details>
+   </section>
+   <section aria-labelledby="takeaways-heading" class="content-section">
+    <div class="section-heading">
+     <h2 id="takeaways-heading">
+      Key Takeaways
+     </h2>
+    </div>
+    <p class="isSelectedEnd">
+     <span style="color: #000000; font-size: 14pt;">
+      Accessible media is about providing learners with equivalent access to information.
+     </span>
+    </p>
+    <p class="isSelectedEnd">
+     <span style="color: #000000; font-size: 14pt;">
+      Remember:
+     </span>
+    </p>
+    <ul>
+     <li>
+      <span style="color: #000000; font-size: 14pt;">
+       Audio needs a text alternative, such as a transcript.
+      </span>
+     </li>
+     <li>
+      <span style="color: #000000; font-size: 14pt;">
+       Video may need text descriptions for important visual information.
+      </span>
+     </li>
+     <li>
+      <span style="color: #000000; font-size: 14pt;">
+       Synchronized media needs accurate captions.
+      </span>
+     </li>
+     <li>
+      <span style="color: #000000; font-size: 14pt;">
+       Important visual information may require audio descriptions.
+      </span>
+     </li>
+     <li>
+      <span style="color: #000000; font-size: 14pt;">
+       Visual content shown during recordings should be described.
+      </span>
+     </li>
+     <li>
+      <span style="color: #000000; font-size: 14pt;">
+       Podcasts should have accurate transcripts.
+      </span>
+     </li>
+     <li>
+      <span style="color: #000000; font-size: 14pt;">
+       Auto-generated captions and transcripts must be reviewed.
+      </span>
+     </li>
+     <li>
+      <span style="color: #000000; font-size: 14pt;">
+       AI can assist with accessibility, but human review is essential.
+      </span>
+     </li>
+    </ul>
+   </section>
+   <section aria-labelledby="resources-heading" class="content-section" id="additional-resources">
+    <div class="section-heading">
+     <h2 id="resources-heading">
+      Additional Resources
+     </h2>
+    </div>
+    <ul>
+     <li>
+      <a href="https://brand.ucla.edu/fundamentals/accessibility/audio-video" rel="noopener" target="_blank">
+       UCLA Audio and Video Guidance
       </a>
-<nav class="primary-nav" aria-label="Primary navigation"><ul><li><a href="index.html">Home</a></li><li><a href="resources.html">Resources</a></li><li><a href="training.html">Training</a></li><li><a href="support.html">Get Help</a></li></ul></nav>
-</div><div class="site-search-row">
-  <search class="site-search" role="search">
-    <form action="search.html" method="get">
-      <label for="site-search-input">Search the site</label>
-      <input id="site-search-input" name="q" type="search" placeholder="Search the site" autocomplete="off">
-      <button type="submit">Search</button>
-    </form>
-  </search>
-</div>
-</header>
-<section class="page-hero" aria-labelledby="page-title"><div class="page-hero-inner"><div class="breadcrumbs"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Media</span></div><span class="eyebrow">Digital Accessibility</span><h1 id="page-title">Media</h1><p>Make video and audio accessible with captions, transcripts, descriptions, and usable players.</p></div></section>
-<main id="main-content"><section class="content-section" aria-labelledby="topics-heading"><div class="section-heading"><h2 id="topics-heading">Explore related resources</h2><p>Choose a topic below. Each entire box is a single keyboard-focusable link.</p></div><div class="topic-grid"><a class="topic-card" href="slide-presentations.html"><h3>Slide Presentations</h3><p>Create slide decks that are readable, navigable, and usable with assistive technology.</p></a>
-<a class="topic-card" href="documents.html"><h3>Documents</h3><p>Prepare accessible Word documents, PDFs, spreadsheets, and other files.</p></a>
-<a class="topic-card" href="bruin-learn.html"><h3>Bruin Learn</h3><p>Build accessible course content, pages, assignments, quizzes, and learning activities in Bruin Learn.</p></a>
-<a class="topic-card" href="media.html"><h3>Media</h3><p>Make video and audio accessible with captions, transcripts, descriptions, and usable players.</p></a>
-<a class="topic-card" href="alt-text.html"><h3>Alt Text</h3><p>Write concise, meaningful alternative text for images, charts, and other visual content.</p></a></div></section><section class="content-section"><div class="support-banner"><div class="support-banner-text"><h2>Need accessibility help?</h2><p>Contact the accessibility team for guidance, consultation, or assistance.</p></div><a class="support-button" href="support.html">Get accessibility support</a></div></section></main>
-<footer class="site-footer"><div class="footer-inner"><p>&copy; UCLA — Digital Accessibility</p><nav class="footer-nav" aria-label="Footer navigation"><ul><li><a href="accessibility.html">Accessibility</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div></footer>
-<script src="search.js" defer></script>
-</body></html>
+     </li>
+     <li>
+      <a href="https://www.w3.org/WAI/media/av/" rel="noopener" target="_blank">
+       W3C Web Accessibility Initiative Making Audio and Video Media Accessible
+      </a>
+     </li>
+     <li>
+      <a href="https://www.section508.gov/create/captions-transcripts/" rel="noopener" target="_blank">
+       Section 508 Captions and Transcripts
+      </a>
+     </li>
+     <li>
+      <a href="https://www.section508.gov/create/synchronized-media/" rel="noopener" target="_blank">
+       Section 508 Video and Other Synchronized Media
+      </a>
+     </li>
+     <li>
+      <a href="https://dcmp.org/" rel="noopener" target="_blank">
+       The Described and Captioned Media Program
+      </a>
+     </li>
+     <li>
+      <a href="https://adp.acb.org/" rel="noopener" target="_blank">
+       Audio Description Project
+      </a>
+     </li>
+    </ul>
+   </section>
+   <section class="content-section">
+    <div class="support-banner">
+     <div class="support-banner-text">
+      <h2>
+       Need accessibility help?
+      </h2>
+      <p>
+       Contact the accessibility team for guidance, consultation, or assistance.
+      </p>
+     </div>
+     <a class="support-button" href="support.html">
+      Get accessibility support
+     </a>
+    </div>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <div class="footer-inner">
+    <p>
+     © UCLA — Digital Accessibility
+    </p>
+    <nav aria-label="Footer navigation" class="footer-nav">
+     <ul>
+      <li>
+       <a href="accessibility.html">
+        Accessibility
+       </a>
+      </li>
+      <li>
+       <a href="privacy.html">
+        Privacy
+       </a>
+      </li>
+      <li>
+       <a href="contact.html">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </footer>
+  <script defer="" src="search.js">
+  </script>
+ </body>
+</html>
