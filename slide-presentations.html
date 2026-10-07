@@ -1,31 +1,273 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Create slide decks that are readable, navigable, and usable with assistive technology."><title>Slide Presentations | UCLA Digital Accessibility</title><link rel="stylesheet" href="styles.css"></head><body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guidance for creating accessible slide presentations, including Microsoft PowerPoint and Google Slides.">
+  <title>Slide Presentations | UCLA Digital Accessibility</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .accessible-accordion {
+      border: 1px solid #d5d5d5;
+      border-radius: 4px;
+      margin: 0 0 1rem;
+      background: #fff;
+    }
+
+    .accessible-accordion summary {
+      cursor: pointer;
+      padding: 1rem 1.25rem;
+      font-weight: 700;
+      color: #005587;
+      list-style-position: inside;
+    }
+
+    .accessible-accordion summary:focus-visible {
+      outline: 3px solid #ffd100;
+      outline-offset: 2px;
+    }
+
+    .accessible-accordion[open] summary {
+      border-bottom: 1px solid #d5d5d5;
+    }
+
+    .accessible-accordion-content {
+      padding: 1rem 1.25rem;
+    }
+  </style>
+</head>
+<body>
+
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header"><div class="header-inner">
-<a class="site-brand" href="TLC website2.html" aria-label="UCLA Digital Accessibility home">
-        <img class="site-brand-logo" src="images/logo_UCLA_blue_boxed.png" alt="UCLA">
-        <span class="site-brand-text">
-          Teaching and Learning Center
-          <small>Resources and support</small>
-        </span>
-      </a>
-<nav class="primary-nav" aria-label="Primary navigation"><ul><li><a href="index.html">Home</a></li><li><a href="resources.html">Resources</a></li><li><a href="training.html">Training</a></li><li><a href="support.html">Get Help</a></li></ul></nav>
-</div><div class="site-search-row">
-  <search class="site-search" role="search">
-    <form action="search.html" method="get">
-      <label for="site-search-input">Search the site</label>
-      <input id="site-search-input" name="q" type="search" placeholder="Search the site" autocomplete="off">
-      <button type="submit">Search</button>
-    </form>
-  </search>
-</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-brand" href="index.html" aria-label="UCLA Digital Accessibility home">
+      <img class="site-brand-logo" src="images/logo_UCLA_blue_boxed.png" alt="UCLA">
+      <span class="site-brand-text">
+        Teaching and Learning Center
+        <small>Resources and support</small>
+      </span>
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="support.html">Get Help</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="site-search-row">
+    <search class="site-search" role="search">
+      <form action="search.html" method="get">
+        <label for="site-search-input">Search the site</label>
+        <input id="site-search-input" name="q" type="search" placeholder="Search the site" autocomplete="off">
+        <button type="submit">Search</button>
+      </form>
+    </search>
+  </div>
 </header>
-<section class="page-hero" aria-labelledby="page-title"><div class="page-hero-inner"><div class="breadcrumbs"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Slide Presentations</span></div><span class="eyebrow">Digital Accessibility</span><h1 id="page-title">Slide Presentations</h1><p>Create slide decks that are readable, navigable, and usable with assistive technology.</p></div></section>
-<main id="main-content"><section class="content-section" aria-labelledby="topics-heading"><div class="section-heading"><h2 id="topics-heading">Explore related resources</h2><p>Choose a topic below. Each entire box is a single keyboard-focusable link.</p></div><div class="topic-grid"><a class="topic-card" href="slide-presentations.html"><h3>Slide Presentations</h3><p>Create slide decks that are readable, navigable, and usable with assistive technology.</p></a>
-<a class="topic-card" href="documents.html"><h3>Documents</h3><p>Prepare accessible Word documents, PDFs, spreadsheets, and other files.</p></a>
-<a class="topic-card" href="bruin-learn.html"><h3>Bruin Learn</h3><p>Build accessible course content, pages, assignments, quizzes, and learning activities in Bruin Learn.</p></a>
-<a class="topic-card" href="media.html"><h3>Media</h3><p>Make video and audio accessible with captions, transcripts, descriptions, and usable players.</p></a>
-<a class="topic-card" href="alt-text.html"><h3>Alt Text</h3><p>Write concise, meaningful alternative text for images, charts, and other visual content.</p></a></div></section><section class="content-section"><div class="support-banner"><div class="support-banner-text"><h2>Need accessibility help?</h2><p>Contact the accessibility team for guidance, consultation, or assistance.</p></div><a class="support-button" href="support.html">Get accessibility support</a></div></section></main>
-<footer class="site-footer"><div class="footer-inner"><p>&copy; UCLA — Digital Accessibility</p><nav class="footer-nav" aria-label="Footer navigation"><ul><li><a href="accessibility.html">Accessibility</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div></footer>
+
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="page-hero-inner">
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="accessible-course-materials-fixed.html">Accessible Course Materials</a>
+      <span aria-hidden="true">/</span>
+      <span>Slide Presentations</span>
+    </div>
+
+    <span class="eyebrow">Digital Accessibility</span>
+    <h1 id="page-title">Accessible Slide Presentations</h1>
+    <p>Guidance for creating accessible digital slide presentations.</p>
+  </div>
+</section>
+
+<main id="main-content">
+  <section class="content-section" aria-labelledby="overview-heading">
+    <div class="section-heading">
+      <h2 id="overview-heading">Overview</h2>
+      <p>Ensuring that digital slides are accessible is essential for creating an inclusive learning environment where all students, including those with disabilities, can fully engage with course content. Thoughtful slide design not only removes barriers to learning but also reflects a commitment to equity, academic success, and respect for diverse learning needs.</p>
+      <p>Review the following practices that support digital accessibility for your slides:</p>
+    </div>
+
+    <ul>
+      <li><strong>Use High-Contrast Colors:</strong> Ensure strong contrast between text and background to support students with low vision or color blindness.</li>
+      <li><strong>Readable Fonts:</strong> Choose sans-serif fonts (e.g., Arial, Calibri) and keep font sizes large enough (minimum 18pt).</li>
+      <li><strong>Slide Titles:</strong> Provide a unique title on each slide to aid screen reader navigation. Use “1 or 2” and “2 of 2” for topics that span multiple slides.</li>
+      <li><strong>Alt Text for Images:</strong> Add clear, concise alternative text for all images, charts, and diagrams.</li>
+      <li><strong>Descriptive Links:</strong> Use meaningful link text (e.g., “Read more about accessible design” instead of “Click here”).</li>
+      <li><strong>Reading Order:</strong> Check that the slide content follows a logical reading order, especially when using complex layouts.</li>
+      <li><strong>Provide Digital Copies:</strong> Share accessible versions (e.g., tagged PDFs or accessible PowerPoint files) ahead of time so students can review content with their preferred tools.</li>
+      <li><strong>Avoid flashing elements:</strong> Flashing elements and animations can be distracting and also potentially dangerous for individuals with epilepsy or other disabilities.</li>
+    </ul>
+  </section>
+
+  <section class="content-section" aria-labelledby="make-heading">
+    <div class="section-heading">
+      <h2 id="make-heading">How to Make Slide Presentations More Accessible</h2>
+    </div>
+
+    <h3>Microsoft PowerPoint</h3>
+
+    <p><strong>Video on Reading Order</strong></p>
+    <p>In this video tutorial, you will learn how to ensure the correct reading order so screen readers navigate through slides in the order that you intend. Reading order is one component of making presentations accessible.</p>
+    <p>For creating digitally accessible presentations, PowerPoint is easier to use overall and therefore is recommended over Google Slides. It provides more robust features and has a built-in accessibility checker. Review the following guidance to learn how to make your PowerPoint presentations accessible to people with disabilities.</p>
+
+    <h3>Google Slides</h3>
+    <p>If you prefer to use Google Slides, note that you will need to take some extra steps to ensure accessibility. The following guidance will walk you through different features of Google Slides.</p>
+
+    <p><strong>Note:</strong> For the guidance below, sequences separated by the &gt; symbol indicate the path to follow in the menu bar. For example, File &gt; Blank Document means select on the File menu, then select Blank Document.</p>
+
+    <p>Additional guidance from Google is also available: <strong>Google Slides: Make your document, presentation, sheets &amp; videos more accessible</strong></p>
+
+    <details class="accessible-accordion">
+      <summary>Understanding templates and layouts</summary>
+      <div class="accessible-accordion-content">
+        <p>If you have been provided with an accessible template for Google Slides, open it and begin adding content. If you are not using an accessible template provided to you, use the default theme or select a new theme from the options provided in Google Slides. If you want to import a theme from outside of the standard Google options, you can do so but may need to take extra steps to ensure reading order and other elements are accessible.</p>
+        <p>Use the “layouts” for each new slide, rather than adding text boxes or other elements manually. This will ensure that each slide has the correct reading order and you will not need to adjust the reading order of new slides you create.</p>
+        <p>Add your first slide by selecting Slide &gt; Apply Layout &gt; Title Slide. For your first slide, you must always choose "Title Slide" as the layout. Note: Google Slides does not use headings. Instead it uses slide titles. For subsequent slides: Slide &gt; Apply Layout &gt; Choose the type of layout you need. Do not insert text boxes into slides (select a different layout instead), as this will change the reading order of the slide.</p>
+        <p>A few additional recommendations to ensure accessibility:</p>
+        <ul>
+          <li>If the text color in the theme is not black, change it to black to increase contrast.</li>
+          <li>Use Arial font as a best practice. Avoid serif fonts.</li>
+          <li>Use font size of 40 pt for titles, and minimum of 28 pt for body text.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="accessible-accordion">
+      <summary>Titles of Slides</summary>
+      <div class="accessible-accordion-content">
+        <p>Each slide must have a unique and descriptive title. If content spans multiple slides, add “1 of 2”, “2 of 2” after the title. This makes it clear that the slides are in the correct order and that the topic is continuing across multiple slides.</p>
+      </div>
+    </details>
+
+    <details class="accessible-accordion">
+      <summary>Adding Images, Alt Text, and Long Descriptions</summary>
+      <div class="accessible-accordion-content">
+        <p>When adding images, insert the image file rather than copy-pasting images (Insert &gt; Image). Every image must have alt text that describes the image, even if it is decorative or one requiring a long description. To add alt text, select the image and then right click. Select “alt text”.</p>
+        <p>For decorative images you can write: alt="". This informs the screenreader that this image can be skipped.</p>
+        <p>Long descriptions are used in addition to alt text when a more detailed description is needed in order to make content understandable. Content that always needs long descriptions are data visualizations and maps. To write a long description use the alt text field to write the location of the long description. For example: “Long description located beneath the chart”. Or you can provide the direct link to a long description. This may link to a google doc, website page, or other document that provides a longer description for those who need it.</p>
+        <p>View our guide on alternate text for additional information on alternate text.</p>
+      </div>
+    </details>
+
+    <details class="accessible-accordion">
+      <summary>Creating Lists</summary>
+      <div class="accessible-accordion-content">
+        <p>Find the list options in “Format &gt; Bullets &amp; Numbering”.</p>
+        <p>Do not add a manual text box, select a different slide layout if needed. Use only the default bullet points. Do not substitute images, icons, or dashes for bullet points.</p>
+      </div>
+    </details>
+
+    <details class="accessible-accordion">
+      <summary>Creating Columns</summary>
+      <div class="accessible-accordion-content">
+        <p>Slide &gt; Apply layout &gt; Select a layout that contains columns.</p>
+        <p>Do not use text boxes to add columns, select a different slide layout if needed. After adding your content, tab through your content (use tab key) to be sure that elements are read from left to right and top to bottom for keyboard only users.</p>
+      </div>
+    </details>
+
+    <details class="accessible-accordion">
+      <summary>Creating a Table</summary>
+      <div class="accessible-accordion-content">
+        <p>Insert &gt; Table &gt; Choose the number of rows and columns you would like for your table.</p>
+        <p>Tables in Google Slides do not contain header rows and thus are difficult to make accessible as compared with Microsoft products that allow for headers. If you are creating a table, keep it as simple as possible. A more complex table could be added instead as a screenshot with clear descriptive text or long description.</p>
+        <p>Check your table for accessibility: Put your cursor in the top left cell of your table and tab through to each cell. The order must go from left to right and top to bottom.</p>
+      </div>
+    </details>
+
+    <details class="accessible-accordion">
+      <summary>Adding Links</summary>
+      <div class="accessible-accordion-content">
+        <p>To insert a link you can either go to Insert &gt; Link, or type the descriptive name for your link, highlight it and then right click to add the URL for the link. Select apply.</p>
+        <p>Note: Links must be given names that describe either their destination, or purpose. Do not use "Click Here". View our guide on descriptive links to learn more.</p>
+      </div>
+    </details>
+
+    <details class="accessible-accordion">
+      <summary>Color Contrast, Font Styling, and Languages</summary>
+      <div class="accessible-accordion-content">
+        <h4>Color Contrast and Other Sensory Characteristics</h4>
+        <p>Do not use color, size, shape, or position as the only way to convey meaning. Use text in your document to duplicate the meaning of the sensory characteristics. The following is an example of an inaccessible table. Color alone is used to describe the project status:</p>
+        <p><strong>Project A</strong></p>
+        <p><strong>Project B</strong></p>
+        <p>The following is an example of an accessible table. Text was added to the cells that contained the color so users who are unable to see the color can tell the status of the project:</p>
+        <p><strong>Project A</strong><br>Incomplete</p>
+        <p><strong>Project B</strong><br>Complete</p>
+
+        <h4>Font Styling</h4>
+        <p>Assistive technologies can not interpret font styling such as bold, italics, and underlining, so your content should not rely on visual styling alone. To emphasize importance without using font styling alone, use “Note:” or “Important:”.</p>
+
+        <h4>Formatting Multiple Languages in One Document</h4>
+        <p>Select the text that is written in a different language.</p>
+        <p>Review &gt; Language &gt; Set proofing language &gt; Select the appropriate language &gt; Select OK.</p>
+        <p><strong>Note:</strong> You do not have to set a language for proper names, technical terms, or foreign words that have become a part of common English usage.</p>
+      </div>
+    </details>
+
+    <details class="accessible-accordion">
+      <summary>Headers, Footers, and Watermarks</summary>
+      <div class="accessible-accordion-content">
+        <p>Screen readers do not automatically read information contained in these elements, so this information must be duplicated in another location. You can additionally include an introductory and/or appendix slide with this information.</p>
+      </div>
+    </details>
+
+    <details class="accessible-accordion">
+      <summary>Embedding Audio, Video, and Multimedia Files</summary>
+      <div class="accessible-accordion-content">
+        <p>For audio only files: provide a transcript (an exact text version of what is being said in the audio file).</p>
+        <p>For multimedia and video files: provide captions. Audio description is required if visual information is not conveyed in the audio. Transcripts are highly recommended. Note that videos uploaded to Bruin Learn course sites will have captions and transcripts available to instructors.</p>
+      </div>
+    </details>
+
+    <h3>Checking Accessibility</h3>
+    <p>The easiest way to check accessibility in Google Slides is to use an extension called Grackle. You can install Grackle and use it to check for accessibility issues. You can also export your slides as a PowerPoint (PPT) file and use Microsoft’s accessibility checker. We do not recommend exporting your slides as a PDF, as this will cause accessibility issues that you will need to address manually, such as tagging your document and reading order. Instead, provide students a copy in either Google Slides (you can create a “view only” version) or as a PowerPoint file.</p>
+  </section>
+
+  <section class="content-section" aria-labelledby="summary-heading">
+    <div class="section-heading">
+      <h2 id="summary-heading">Summary and Key Takeaways</h2>
+    </div>
+    <ul>
+      <li>Use an accessible template, the default theme, or built-in themes. Use layouts instead of manually creating slide elements.</li>
+      <li>Provide alternative text: Ensure all images include alt text.</li>
+      <li>Build simple, logical tables: Limit tables to standard row/column layouts—never merge, split, or nest cells. Verify reading order by using the Tab key to move sequentially from the top-left to the bottom-right cell.</li>
+      <li>Never rely solely on visual cues: Color, size, shape, or font styling (bold/italics) should never be the only way meaning is conveyed. Always supplement visual indicators with explicit written text (e.g., "Status: Complete" or "Note:").</li>
+      <li>Use descriptive links: Avoid generic text like "Click Here."</li>
+      <li>Duplicate invisible content: Screen readers do not automatically read headers, footers, or watermarks. Crucial information placed in these areas must be repeated in the main document body.</li>
+    </ul>
+  </section>
+
+  <section class="content-section">
+    <div class="support-banner">
+      <div class="support-banner-text">
+        <h2>Need accessibility help?</h2>
+        <p>Contact the accessibility team for guidance, consultation, or assistance.</p>
+      </div>
+      <a class="support-button" href="support.html">Get accessibility support</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; UCLA — Digital Accessibility</p>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <ul>
+        <li><a href="accessibility.html">Accessibility</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
 <script src="search.js" defer></script>
-</body></html>
+</body>
+</html>
