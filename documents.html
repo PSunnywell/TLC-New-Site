@@ -1,608 +1,1139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Guidance for creating accessible Microsoft Word and Google Docs documents, PDFs, spreadsheets, links, lists, tables, and other instructional documents.">
-  <title>Documents | UCLA Digital Accessibility</title>
-  <link rel="stylesheet" href="styles.css">
-
-<style>
-  .content-accordion {
-    border: 1px solid #d9d9d9;
-    border-radius: 8px;
-    background: #ffffff;
-    overflow: hidden;
-  }
-  .content-accordion + .content-accordion {
-    margin-top: 16px;
-  }
-  .content-accordion summary {
-    cursor: pointer;
-    padding: 18px 22px;
-    background: #f5f7f8;
-    color: #005587;
-    font-size: 1.15rem;
-    font-weight: 700;
-  }
-  .content-accordion summary:focus-visible {
-    outline: 3px solid #2774ae;
-    outline-offset: -3px;
-  }
-  .content-accordion summary::marker {
-    color: #2774ae;
-  }
-  .accordion-title {
-    display: inline;
-  }
-  .accordion-content {
-    padding: 24px;
-  }
-  @media (max-width: 600px) {
-    .content-accordion summary {
-      padding: 16px 18px;
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Guidance for creating accessible Microsoft Word and Google Docs documents, PDFs, spreadsheets, links, lists, tables, and other instructional documents." name="description"/>
+  <title>
+   Documents | UCLA Digital Accessibility
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+  <style>
+   .accessible-accordion {
+      border: 1px solid #d5d5d5;
+      border-radius: 4px;
+      margin: 0 0 1rem;
+      background: #fff;
     }
-    .accordion-content {
-      padding: 18px;
+
+    .accessible-accordion summary {
+      cursor: pointer;
+      padding: 1rem 1.25rem;
+      font-weight: 700;
+      color: #005587;
+      list-style-position: inside;
     }
-  }
-</style>
-</head>
-<body>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+    .accessible-accordion summary:focus-visible {
+      outline: 3px solid #ffd100;
+      outline-offset: 2px;
+    }
 
-<header class="site-header">
-  <div class="header-inner">
-    <a class="site-brand" href="index.html" aria-label="UCLA Digital Accessibility home">
-      <img class="site-brand-logo" src="images/logo_UCLA_blue_boxed.png" alt="UCLA">
-      <span class="site-brand-text">
-        Teaching and Learning Center
-        <small>Resources and support</small>
-      </span>
+    .accessible-accordion[open] summary {
+      border-bottom: 1px solid #d5d5d5;
+    }
+
+    .accessible-accordion-content {
+      padding: 1rem 1.25rem;
+    }
+  </style>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Skip to main content
+  </a>
+  <header class="site-header">
+   <div class="header-inner">
+    <a aria-label="UCLA Digital Accessibility home" class="site-brand" href="index.html">
+     <img alt="UCLA" class="site-brand-logo" src="images/logo_UCLA_blue_boxed.png"/>
+     <span class="site-brand-text">
+      Teaching and Learning Center
+      <small>
+       Resources and support
+      </small>
+     </span>
     </a>
-
-    <nav class="primary-nav" aria-label="Primary navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="training.html">Training</a></li>
-        <li><a href="support.html">Get Help</a></li>
-      </ul>
+    <nav aria-label="Primary navigation" class="primary-nav">
+     <ul>
+      <li>
+       <a href="index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="resources.html">
+        Resources
+       </a>
+      </li>
+      <li>
+       <a href="training.html">
+        Training
+       </a>
+      </li>
+      <li>
+       <a href="support.html">
+        Get Help
+       </a>
+      </li>
+     </ul>
     </nav>
-  </div>
-
-  <div class="site-search-row">
+   </div>
+   <div class="site-search-row">
     <search class="site-search" role="search">
-      <form action="search.html" method="get">
-        <label for="site-search-input">Search the site</label>
-        <input id="site-search-input" name="q" type="search" placeholder="Search the site" autocomplete="off">
-        <button type="submit">Search</button>
-      </form>
+     <form action="search.html" method="get">
+      <label for="site-search-input">
+       Search the site
+      </label>
+      <input autocomplete="off" id="site-search-input" name="q" placeholder="Search the site" type="search"/>
+      <button type="submit">
+       Search
+      </button>
+     </form>
     </search>
-  </div>
-</header>
+   </div>
+  </header>
 
-<section class="page-hero" aria-labelledby="page-title">
+ <section class="page-hero" aria-labelledby="page-title">
   <div class="page-hero-inner">
     <div class="breadcrumbs">
       <a href="index.html">Home</a>
       <span aria-hidden="true">/</span>
+      <a href="accessible-course-materials1004.html">Accessible Course Materials</a>
+      <span aria-hidden="true">/</span>
       <span>Documents</span>
     </div>
-    <span class="eyebrow">Digital Accessibility</span>
-    <h1 id="page-title">Accessible Documents</h1>
-    <p>Create clear, structured documents that people can navigate, understand, and use with assistive technologies.</p>
-  </div>
-</section>
 
-<main id="main-content">
 
-  <section class="content-section" aria-labelledby="overview-heading">
+    <span class="eyebrow">
+     Digital Accessibility
+    </span>
+    <h1 id="page-title">
+     Accessible Documents
+    </h1>
+    <p>
+     Create clear, structured documents that users can navigate, understand, and use with assistive technologies.
+    </p>
+   </div>
+  </section>
+  <main id="main-content">
+   <section aria-labelledby="overview-heading" class="content-section">
     <div class="section-heading">
-      <h2 id="overview-heading">Overview</h2>
+     <h2 id="overview-heading">
+      Overview
+     </h2>
     </div>
-    <div class="prose">
-      <p>Instructional documents are often an essential part of a course. Making these documents accessible helps ensure that all learners can understand, navigate, and interact with the information they contain. Creating an accessible document means considering both what the document looks like and how it is structured behind the scenes.</p>
-      <p>In this module, you will learn how to create accessible Word and Google Docs documents, identify and fix common PDF accessibility issues, and format Excel and Google Sheets for accessibility. You will also learn how to use built-in accessibility checkers to identify and correct common issues.</p>
-      <p>The strategies in this module focus on creating clear document structure, using appropriate headings and lists, creating accessible links and tables, adding alternative text to images and charts, and ensuring that documents can be interpreted correctly by assistive technologies.</p>
-
-      <h3>Learning Objectives</h3>
-      <p>By the end of this module, you should be able to:</p>
-      <ul>
-        <li>Create documents with a clear and logical heading structure.</li>
-        <li>Use built-in styles and formatting tools to communicate document structure.</li>
-        <li>Create accessible bulleted and numbered lists.</li>
-        <li>Create and structure data tables appropriately.</li>
-        <li>Write meaningful and descriptive link text.</li>
-        <li>Provide appropriate alternative text for meaningful images.</li>
-        <li>Identify when a complex image requires a long description.</li>
-        <li>Use readable fonts, appropriate formatting, and sufficient color contrast.</li>
-        <li>Avoid using color alone to communicate important information.</li>
-        <li>Use accessibility checking tools to identify potential barriers before sharing a document.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="content-section" aria-labelledby="why-heading">
+    <p>
+     Instructional documents are often an essential part of a course. Making these documents accessible helps ensure that all learners can understand, navigate, and interact with the information they contain. Creating an accessible document means considering both what the document looks like and how it is structured behind the scenes.
+    </p>
+    <p>
+     In this module, you will learn how to create accessible Word and Google Docs documents, identify and fix common PDF accessibility issues, and format Excel and Google Sheets for accessibility. You will also learn how to use built-in accessibility checkers to identify and correct common issues.
+    </p>
+    <p>
+     The strategies in this module focus on creating clear document structure, using appropriate headings and lists, creating accessible links and tables, adding alternative text to images and charts, and ensuring that documents can be interpreted correctly by assistive technologies.
+    </p>
+    <h3>
+     Learning Objectives
+    </h3>
+    <p>
+     By the end of this module, you should be able to:
+    </p>
+    <ul>
+     <li>
+      Create documents with a clear and logical heading structure.
+     </li>
+     <li>
+      Use built-in styles and formatting tools to communicate document structure.
+     </li>
+     <li>
+      Create accessible bulleted and numbered lists.
+     </li>
+     <li>
+      Create and structure data tables appropriately.
+     </li>
+     <li>
+      Write meaningful and descriptive link text.
+     </li>
+     <li>
+      Provide appropriate alternative text for meaningful images.
+     </li>
+     <li>
+      Identify when a complex image requires a long description.
+     </li>
+     <li>
+      Use readable fonts, appropriate formatting, and sufficient color contrast.
+     </li>
+     <li>
+      Avoid using color alone to communicate important information.
+     </li>
+     <li>
+      Use accessibility checking tools to identify potential barriers before sharing a document.
+     </li>
+    </ul>
+   </section>
+   <section aria-labelledby="why-heading" class="content-section">
     <div class="section-heading">
-      <h2 id="why-heading">Why Create Accessible Documents?</h2>
+     <h2 id="why-heading">
+      Why Create Accessible Documents?
+     </h2>
     </div>
-    <div class="prose">
-      <p>Consider how students might interact with a document you provide.</p>
-      <p>Some students may:</p>
-      <ul>
-        <li>Read it on a laptop or desktop computer.</li>
-        <li>View it on a phone or tablet.</li>
-   <section class="content-section" aria-labelledby="headings-heading">
-    <details class="content-accordion">
-      <summary><span role="heading" aria-level="2" class="accordion-title">Headings</span></summary>
-      <div class="accordion-content">
-    <div class="prose">
-      <p>Headings do more than make sections of a document stand out visually. They provide structure and organization, helping readers understand how information is grouped and how different sections relate to one another.</p>
-      <p>For sighted readers, a change in font size, bolding, or spacing may visually signal that a new section has begun. Assistive technology, however, relies on the document's underlying structure to identify headings. Simply making text larger or bold does not necessarily make it a heading.</p>
-      <p>Using built-in heading styles in Microsoft Word or Google Docs creates that underlying structure. It allows screen reader users to identify and navigate between sections of a document and helps all readers scan content, locate information, and understand the organization of the material.</p>
-      <p>Think of headings as the outline or roadmap of your document. If someone reviewed only the headings, they should be able to understand how the document is organized.</p>
-      <p>Rather than formatting text to <em>look</em> like a heading, use the application's built-in heading styles to make it a heading.</p>
+    <p>
+     Consider how students might interact with a document you provide.
+    </p>
+    <p>
+     Some students may:
+    </p>
+    <ul>
+     <li>
+      Read it on a laptop or desktop computer.
+     </li>
+     <li>
+      View it on a phone or tablet.
+     </li>
+     <li>
+      Magnify the document.
+     </li>
+     <li>
+      Navigate it entirely with a keyboard.
+     </li>
+     <li>
+      Change display settings to make it easier to read.
+     </li>
+     <li>
+      Use text-to-speech software.
+     </li>
+     <li>
+      Use a screen reader to navigate headings, links, lists, and other document elements.
+     </li>   
+    </ul>
+    <p>Accessible documents provide meaningful structure, not simply visual formatting. For example, a sighted reader may recognize large, bold text as the beginning of a new section. A screen reader cannot necessarily determine that the text is a heading simply because it looks different.</p>
+  <p>That distinction is central to document accessibility:
 
-      <h3>Use Built-In Heading Styles</h3>
-      <p>Headings help organize longer documents into sections and subsections.</p>
-      <p>Instead of manually changing the font size, color, or weight to make text <em>look</em> like a heading, use the built-in heading styles available in Microsoft Word or Google Docs.</p>
-      <p>For example:</p>
-      <ul>
-        <li>Heading 1 — Course Accessibility Guidelines</li>
-        <li>Heading 2 — Documents</li>
-        <li>Heading 3 — Heading Structure</li>
-        <li>Heading 3 — Images</li>
-      </ul>
-      <p>Built-in headings provide an underlying structure that assistive technologies can recognize.</p>
-      <p>A screen reader user may navigate from heading to heading rather than reading an entire document line by line. Headings can also make documents easier for everyone to scan and understand.</p>
-
-      <h3>Keep the Hierarchy Logical</h3>
-      <p>Think of headings as an outline.</p>
-      <p>If Heading 2 introduces a section, Heading 3 can identify a subsection within it.</p>
-      <p>Avoid choosing a heading simply because you prefer its visual appearance.</p>
-      <p>The heading level should communicate where the section belongs within the hierarchy of the document.</p>
-    </div>
-      </div>
-    </details>
+Don't just make content look structured. Give it structure.</p> 
   </section>
-
-  <section class="content-section" aria-labelledby="word-heading">
-    <details class="content-accordion">
-      <summary><span role="heading" aria-level="2" class="accordion-title">Microsoft Word Documents</span></summary>
-      <div class="accordion-content">
-    <div class="prose">
+   <section aria-labelledby="make-heading" class="content-section">
+    <div class="section-heading">
+     <h2 id="make-heading">
+      How to Make Documents More Accessible
+     </h2>
+    </div>
+    <details class="accessible-accordion">
+     <summary>
+      Headings
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       Headings do more than make sections of a document stand out visually. They provide structure and organization, helping readers understand how information is grouped and how different sections relate to one another.
+      </p>
+      <p>
+       For sighted readers, a change in font size, bolding, or spacing may visually signal that a new section has begun. Assistive technology, however, relies on the document's underlying structure to identify headings. Simply making text larger or bold does not necessarily make it a heading.
+      </p>
+      <p>
+       Using built-in heading styles in Microsoft Word or Google Docs creates that underlying structure. It allows screen reader users to identify and navigate between sections of a document and helps all readers scan content, locate information, and understand the organization of the material.
+      </p>
+      <p>
+       Think of headings as the outline or roadmap of your document. If someone reviewed only the headings, they should be able to understand how the document is organized.
+      </p>
+      <p>
+       Rather than formatting text to
+       <em>
+        look
+       </em>
+       like a heading, use the application's built-in heading styles to make it a heading.
+      </p>
+      <h3>
+       Use Built-In Heading Styles
+      </h3>
+      <p>
+       Headings help organize longer documents into sections and subsections.
+      </p>
+      <p>
+       Instead of manually changing the font size, color, or weight to make text
+       <em>
+        look
+       </em>
+       like a heading, use the built-in heading styles available in Microsoft Word or Google Docs.
+      </p>
+      <p>
+       For example:
+      </p>
+      <ul>
+       <li>
+        Heading 1 &mdash; Course Accessibility Guidelines
+       </li>
+       <li>
+        Heading 2 &mdash; Documents
+       </li>
+       <li>
+        Heading 3 &mdash; Heading Structure
+       </li>
+       <li>
+        Heading 3 &mdash; Images
+       </li>
+      </ul>
+      <p>
+       Built-in headings provide an underlying structure that assistive technologies can recognize.
+      </p>
+      <p>
+       A screen reader user may navigate from heading to heading rather than reading an entire document line by line. Headings can also make documents easier for everyone to scan and understand.
+      </p>
+      <h3>
+       Keep the Hierarchy Logical
+      </h3>
+      <p>
+       Think of headings as an outline.
+      </p>
+      <p>
+       If Heading 2 introduces a section, Heading 3 can identify a subsection within it.
+      </p>
+      <p>
+       Avoid choosing a heading simply because you prefer its visual appearance.
+      </p>
+      <p>
+       The heading level should communicate where the section belongs within the hierarchy of the document.
+      </p>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Microsoft Word Documents
+     </summary>
+     <div class="accessible-accordion-content">
+      <h3>
+       Use the built-in structural tools, not visual formatting alone
+      </h3>
+      <ul>
+       <li>
+        Use built-in Styles for headings and maintain a logical hierarchy.
+       </li>
+       <li>
+        Use Bullets and Numbering tools instead of manually typed symbols or numbers.
+       </li>
+       <li>
+        Use descriptive link text that communicates the destination or action.
+       </li>
+       <li>
+        Use paragraph formatting rather than the Enter key to create space between paragraphs.
+       </li>
+       <li>
+        Add meaningful alt text to informative images or mark decorative images appropriately.
+       </li>
+       <li>
+        Use simple tables for data and identify the appropriate header row.
+       </li>
+       <li>
+        Be sure all your text and images are enclosed in the text box.
+       </li>
+      </ul>
+      <p>
+       <strong>
+        Note:
+       </strong>
+       Structure should be meaningful to assistive technology&mdash;not just visually apparent.
+      </p>
+      <h3>
+       Finish With Accessibility in Mind
+      </h3>
+      <ul>
+       <li>
+        Maintain sufficient color contrast and do not rely on color alone.
+       </li>
+       <li>
+        Avoid excessive ALL CAPS, italics, underlining, decorative fonts, and dense paragraphs.
+       </li>
+       <li>
+        Set the document language so assistive technology can pronounce content appropriately.
+       </li>
+       <li>
+        Use a meaningful document title and filename.
+       </li>
+       <li>
+        Run Word&rsquo;s Accessibility Checker, review the findings, correct issues, and check again.
+       </li>
+      </ul>
+      <h3>
+       Setting Up Microsoft Word (For Best Accessibility Results)
+      </h3>
+      <p>
+       Add metadata to your file by navigating to
+       <strong>
+        Info &gt; Properties
+       </strong>
+       .
+      </p>
       <figure>
-        <img src="https://bruinlearn.ucla.edu/courses/240634/files/25324435/preview" alt="" role="presentation">
+       <img alt="Screenshot of Microsoft Word showing the Info view with the Properties area highlighted and document metadata fields filled in." src="https://bruinlearn.ucla.edu/courses/240634/files/25494243/preview"/>
       </figure>
-
-      <h3>Use the built-in structural tools, not visual formatting alone</h3>
-      <ul>
-        <li>Use built-in Styles for headings and maintain a logical hierarchy.</li>
-        <li>Use Bullets and Numbering tools instead of manually typed symbols or numbers.</li>
-        <li>Use descriptive link text that communicates the destination or action.</li>
-        <li>Use paragraph formatting rather than the Enter key to create space between paragraphs.</li>
-        <li>Add meaningful alt text to informative images or mark decorative images appropriately.</li>
-        <li>Use simple tables for data and identify the appropriate header row.</li>
-        <li>Be sure all your text and images are enclosed in the text box.</li>
-      </ul>
-      <p><strong>Note:</strong> Structure should be meaningful to assistive technology—not just visually apparent.</p>
-
-      <h3>Finish With Accessibility in Mind</h3>
-      <ul>
-        <li>Maintain sufficient color contrast and do not rely on color alone.</li>
-        <li>Avoid excessive ALL CAPS, italics, underlining, decorative fonts, and dense paragraphs.</li>
-        <li>Set the document language so assistive technology can pronounce content appropriately.</li>
-        <li>Use a meaningful document title and filename.</li>
-        <li>Run Word’s Accessibility Checker, review the findings, correct issues, and check again.</li>
-      </ul>
-
-      <h3>Setting Up Microsoft Word (For Best Accessibility Results)</h3>
-      <p>Add metadata to your file by navigating to <strong>Info &gt; Properties</strong>.</p>
+      <p>
+       Turn on all formatting marks (non-printing characters). This will enable you to see where you may have used paragraph returns to create space rather than using paragraph formatting. You must remove any of these instances before exporting to a PDF.
+      </p>
       <figure>
-        <img src="https://bruinlearn.ucla.edu/courses/240634/files/25494243/preview" alt="Screenshot of Microsoft Word showing the Info view with the Properties area highlighted and document metadata fields filled in.">
+       <img alt="Screenshot of Microsoft Word showing Word Options and the Display settings with Show all formatting marks checked." src="https://bruinlearn.ucla.edu/courses/240634/files/25494262/preview"/>
       </figure>
-      <p>Turn on all formatting marks (non-printing characters). This will enable you to see where you may have used paragraph returns to create space rather than using paragraph formatting. You must remove any of these instances before exporting to a PDF.</p>
+      <h3>
+       Create Accessible Source Content
+      </h3>
+      <ul>
+       <li>
+        Use the Styles menu for headings and maintain a logical hierarchy.
+       </li>
+       <li>
+        Use built-in bulleted and numbered lists.
+       </li>
+       <li>
+        Write descriptive links that make sense when encountered independently.
+       </li>
+       <li>
+        Provide meaningful alt text for informative images.
+       </li>
+       <li>
+        Use tables for data, keep structures straightforward, and consider how cells will be navigated sequentially.
+       </li>
+       <li>
+        Maintain sufficient contrast, clear formatting, adequate spacing, and manageable paragraph lengths.
+       </li>
+      </ul>
+      <h3>
+       Be Careful When Converting
+      </h3>
+      <ul>
+       <li>
+        An accessible Google Doc does not guarantee that every exported format will remain accessible.
+       </li>
+       <li>
+        Downloading or converting a Google Doc&mdash;especially to PDF&mdash;can change accessibility.
+       </li>
+       <li>
+        The new file should be checked separately after conversion.
+       </li>
+       <li>
+        Accessibility needs to be evaluated in the format you ultimately provide to students.
+       </li>
+      </ul>
+     </div>
+    </details>
+    <details class="accessible-accordion">
+     <summary>
+      Google Docs
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       <strong>
+        Use Google's built-in structure.
+       </strong>
+      </p>
+      <p>
+       The same accessibility principles apply as in Microsoft Word.
+      </p>
+      <h3>
+       Google Docs Settings
+      </h3>
+      <p>
+       Turn on all formatting marks (non-printing characters). This will enable you to see where you may have used paragraph returns to create space rather than using paragraph formatting. You must remove any of these instances before exporting to a PDF.
+      </p>
       <figure>
-        <img src="https://bruinlearn.ucla.edu/courses/240634/files/25494262/preview" alt="Screenshot of Microsoft Word showing Word Options and the Display settings with Show all formatting marks checked.">
+       <img alt="Screenshot of Google Docs showing the View tab with Show non-printing characters enabled." src="https://bruinlearn.ucla.edu/courses/240634/files/25509476/preview"/>
       </figure>
-
-      <h3>Create Accessible Source Content</h3>
-      <ul>
-        <li>Use the Styles menu for headings and maintain a logical hierarchy.</li>
-        <li>Use built-in bulleted and numbered lists.</li>
-        <li>Write descriptive links that make sense when encountered independently.</li>
-        <li>Provide meaningful alt text for informative images.</li>
-        <li>Use tables for data, keep structures straightforward, and consider how cells will be navigated sequentially.</li>
-        <li>Maintain sufficient contrast, clear formatting, adequate spacing, and manageable paragraph lengths.</li>
-      </ul>
-
-      <h3>Be Careful When Converting</h3>
-      <ul>
-        <li>An accessible Google Doc does not guarantee that every exported format will remain accessible.</li>
-        <li>Downloading or converting a Google Doc—especially to PDF—can change accessibility.</li>
-        <li>The new file should be checked separately after conversion.</li>
-        <li>Accessibility needs to be evaluated in the format you ultimately provide to students.</li>
-      </ul>
-    </div>
-      </div>
-    </details>
-  </section>
-
-  <section class="content-section" aria-labelledby="google-docs-heading">
-    <details class="content-accordion">
-      <summary><span role="heading" aria-level="2" class="accordion-title">Google Docs</span></summary>
-      <div class="accordion-content">
-    <div class="prose">
-      <p><strong>Use Google's built-in structure.</strong></p>
-      <p>The same accessibility principles apply as in Microsoft Word.</p>
-
-      <h3>Google Docs Settings</h3>
-      <p>Turn on all formatting marks (non-printing characters). This will enable you to see where you may have used paragraph returns to create space rather than using paragraph formatting. You must remove any of these instances before exporting to a PDF.</p>
+      <p>
+       Use paragraph formatting rather than using the Enter key to add space between paragraphs.
+      </p>
       <figure>
-        <img src="https://bruinlearn.ucla.edu/courses/240634/files/25509476/preview" alt="Screenshot of Google Docs showing the View tab with Show non-printing characters enabled.">
+       <img alt="Screenshot of Google Docs showing paragraph spacing settings in the Format menu." src="https://bruinlearn.ucla.edu/courses/240634/files/25509748/preview"/>
       </figure>
-      <p>Use paragraph formatting rather than using the Enter key to add space between paragraphs.</p>
-      <figure>
-        <img src="https://bruinlearn.ucla.edu/courses/240634/files/25509748/preview" alt="Screenshot of Google Docs showing paragraph spacing settings in the Format menu.">
-      </figure>
-
-      <h3>Create Accessible Source Content</h3>
+      <h3>
+       Create Accessible Source Content
+      </h3>
       <ul>
-        <li>Use the Styles menu for headings and maintain a logical hierarchy.</li>
-        <li>Use built-in bulleted and numbered lists.</li>
-        <li>Write descriptive links that make sense when encountered independently.</li>
-        <li>Provide meaningful alt text for informative images.</li>
-        <li>Use tables for data, keep structures straightforward, and consider how cells will be navigated sequentially.</li>
-        <li>Maintain sufficient contrast, clear formatting, adequate spacing, and manageable paragraph lengths.</li>
+       <li>
+        Use the Styles menu for headings and maintain a logical hierarchy.
+       </li>
+       <li>
+        Use built-in bulleted and numbered lists.
+       </li>
+       <li>
+        Write descriptive links that make sense when encountered independently.
+       </li>
+       <li>
+        Provide meaningful alt text for informative images.
+       </li>
+       <li>
+        Use tables for data, keep structures straightforward, and consider how cells will be navigated sequentially.
+       </li>
+       <li>
+        Maintain sufficient contrast, clear formatting, adequate spacing, and manageable paragraph lengths.
+       </li>
       </ul>
-
-      <h3>Be Careful When Converting</h3>
+      <h3>
+       Be Careful When Converting
+      </h3>
       <ul>
-        <li>An accessible Google Doc does not guarantee that every exported format will remain accessible.</li>
-        <li>Downloading or converting a Google Doc—especially to PDF—can change accessibility.</li>
-        <li>The new file should be checked separately after conversion.</li>
-        <li>Accessibility needs to be evaluated in the format you ultimately provide to students.</li>
+       <li>
+        An accessible Google Doc does not guarantee that every exported format will remain accessible.
+       </li>
+       <li>
+        Downloading or converting a Google Doc&mdash;especially to PDF&mdash;can change accessibility.
+       </li>
+       <li>
+        The new file should be checked separately after conversion.
+       </li>
+       <li>
+        Accessibility needs to be evaluated in the format you ultimately provide to students.
+       </li>
       </ul>
-    </div>
-      </div>
+     </div>
     </details>
-  </section>
-
-  <section class="content-section" aria-labelledby="pdf-heading">
-    <details class="content-accordion">
-      <summary><span role="heading" aria-level="2" class="accordion-title">PDFs</span></summary>
-      <div class="accordion-content">
-    <div class="prose">
-      <h3>Does Your Document Really Need to be a PDF?</h3>
-
-      <h3>What Makes a PDF Accessible?</h3>
+    <details class="accessible-accordion">
+     <summary>
+      PDFs
+     </summary>
+     <div class="accessible-accordion-content">
+      <h3>
+       Does Your Document Really Need to be a PDF?
+      </h3>
+      <h3>
+       What Makes a PDF Accessible?
+      </h3>
       <ul>
-        <li>Accessible PDFs generally rely on tags that communicate structure and meaning to assistive technology.</li>
-        <li>Tags can identify headings, paragraphs, lists, tables, images, and links. Think of tags as the structural information behind the visual document.</li>
-        <li>Reading order must follow a logical sequence.</li>
-        <li>The PDF itself must be evaluated—not only the source document.</li>
+       <li>
+        Accessible PDFs generally rely on tags that communicate structure and meaning to assistive technology.
+       </li>
+       <li>
+        Tags can identify headings, paragraphs, lists, tables, images, and links. Think of tags as the structural information behind the visual document.
+       </li>
+       <li>
+        Reading order must follow a logical sequence.
+       </li>
+       <li>
+        The PDF itself must be evaluated&mdash;not only the source document.
+       </li>
       </ul>
-
-      <h3>“Save as PDF” Does Not Mean Accessible</h3>
+      <h3>
+       &ldquo;Save as PDF&rdquo; Does Not Mean Accessible
+      </h3>
       <ul>
-        <li>Conversion can affect tags, reading order, headings, lists, tables, links, images, alt text, and document properties.</li>
-        <li>Always check the PDF after conversion.</li>
-        <li>If the PDF is what students receive, the PDF is what you need to evaluate.</li>
+       <li>
+        Conversion can affect tags, reading order, headings, lists, tables, links, images, alt text, and document properties.
+       </li>
+       <li>
+        Always check the PDF after conversion.
+       </li>
+       <li>
+        If the PDF is what students receive, the PDF is what you need to evaluate.
+       </li>
       </ul>
-      <p><strong>Accessible source ≠ automatically accessible PDF</strong></p>
-
-      <h3>Scanned PDFs Need Special Attention</h3>
+      <p>
+       <strong>
+        Accessible source &ne; automatically accessible PDF
+       </strong>
+      </p>
+      <h3>
+       Scanned PDFs Need Special Attention
+      </h3>
       <ul>
-        <li>A scanned PDF may contain pictures of pages rather than machine-readable text.</li>
-        <li>If you cannot select or search the text, the PDF may be image-based.</li>
-        <li>After OCR, the file may still need tags, headings, reading order, alt text, table structure, language information, and other corrections.</li>
+       <li>
+        A scanned PDF may contain pictures of pages rather than machine-readable text.
+       </li>
+       <li>
+        If you cannot select or search the text, the PDF may be image-based.
+       </li>
+       <li>
+        After OCR, the file may still need tags, headings, reading order, alt text, table structure, language information, and other corrections.
+       </li>
       </ul>
-    </div>
-      </div>
+     </div>
     </details>
-  </section>
-
-  <section class="content-section" aria-labelledby="format-heading">
-    <details class="content-accordion">
-      <summary><span role="heading" aria-level="2" class="accordion-title">Which Format Should I Share: Word, Google Docs, or PDF?</span></summary>
-      <div class="accordion-content">
-    <div class="prose">
-      <p>Choose the format that best supports how students need to access and use the information.</p>
-      <h3>Microsoft Word</h3>
-      <p>Good when students benefit from flexible, editable, structured source content.</p>
-      <h3>Google Docs</h3>
-      <p>Good for web-based access, collaboration, and maintaining accessible source content.</p>
-      <h3>PDF</h3>
-      <p>Useful when a fixed-format document is needed. For example, when signatures are needed. Note: these require separate accessibility verification.</p>
-      <p><strong>Do not convert to PDF automatically just because that is your usual workflow.</strong></p>
-    </div>
-      </div>
+    <details class="accessible-accordion">
+     <summary>
+      Which Format Should I Share: Word, Google Docs, or PDF?
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       Choose the format that best supports how students need to access and use the information.
+      </p>
+      <h3>
+       Microsoft Word
+      </h3>
+      <p>
+       Good when students benefit from flexible, editable, structured source content.
+      </p>
+      <h3>
+       Google Docs
+      </h3>
+      <p>
+       Good for web-based access, collaboration, and maintaining accessible source content.
+      </p>
+      <h3>
+       PDF
+      </h3>
+      <p>
+       Useful when a fixed-format document is needed. For example, when signatures are needed. Note: these require separate accessibility verification.
+      </p>
+      <p>
+       <strong>
+        Do not convert to PDF automatically just because that is your usual workflow.
+       </strong>
+      </p>
+     </div>
     </details>
-  </section>
-
-  <section class="content-section" aria-labelledby="spreadsheet-heading">
-    <details class="content-accordion">
-      <summary><span role="heading" aria-level="2" class="accordion-title">Excel and Google Sheets</span></summary>
-      <div class="accordion-content">
-    <div class="prose">
-      <h3>Accessible Spreadsheets: Core Practices</h3>
+    <details class="accessible-accordion">
+     <summary>
+      Excel and Google Sheets
+     </summary>
+     <div class="accessible-accordion-content">
+      <h3>
+       Accessible Spreadsheets: Core Practices
+      </h3>
       <ul>
-        <li>Organize spreadsheet content with a clear and logical structure.</li>
-        <li>Use headers so rows and columns can be understood in context.</li>
-        <li>Add alternative text/long descriptions to meaningful images, charts, and graphics.</li>
-        <li>Do not rely on color alone to communicate information.</li>
-        <li>Use an accessibility checker when available, then review the spreadsheet manually.</li>
+       <li>
+        Organize spreadsheet content with a clear and logical structure.
+       </li>
+       <li>
+        Use headers so rows and columns can be understood in context.
+       </li>
+       <li>
+        Add alternative text/long descriptions to meaningful images, charts, and graphics.
+       </li>
+       <li>
+        Do not rely on color alone to communicate information.
+       </li>
+       <li>
+        Use an accessibility checker when available, then review the spreadsheet manually.
+       </li>
       </ul>
-    </div>
-      </div>
+     </div>
     </details>
-  </section>
-
-  <section class="content-section" aria-labelledby="contrast-heading">
-    <details class="content-accordion">
-      <summary><span role="heading" aria-level="2" class="accordion-title">Color Contrast</span></summary>
-      <div class="accordion-content">
-    <div class="prose">
-      <p>Color Contrast is a measure of the difference in perceived brightness between two colors. The brightness difference is expressed as a ratio ranging from 1.1 (white on white) to 21:1 (black on white).</p>
-      <p>In WCAG 2.1 AA, the following three success criteria address contrast:</p>
-
-      <h3>1.4.3 Contrast (Minimum)</h3>
-      <p>The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:</p>
+    <details class="accessible-accordion">
+     <summary>
+      Color Contrast
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       Color Contrast is a measure of the difference in perceived brightness between two colors. The brightness difference is expressed as a ratio ranging from 1.1 (white on white) to 21:1 (black on white).
+      </p>
+      <p>
+       In WCAG 2.1 AA, the following three success criteria address contrast:
+      </p>
+      <h3>
+       1.4.3 Contrast (Minimum)
+      </h3>
+      <p>
+       The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:
+      </p>
       <ul>
-        <li><strong>Large Text (18 pt or larger):</strong> Large-scale text and images of large-scale text have a contrast ratio of at least 3:1.</li>
-        <li><strong>Incidental:</strong> Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.</li>
-        <li><strong>Logotypes:</strong> Text that is part of a logo or brand name has no contrast requirement.</li>
+       <li>
+        <strong>
+         Large Text (18 pt or larger):
+        </strong>
+        Large-scale text and images of large-scale text have a contrast ratio of at least 3:1.
+       </li>
+       <li>
+        <strong>
+         Incidental:
+        </strong>
+        Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.
+       </li>
+       <li>
+        <strong>
+         Logotypes:
+        </strong>
+        Text that is part of a logo or brand name has no contrast requirement.
+       </li>
       </ul>
-      <p>Text color contrast ratio examples:</p>
+      <p>
+       Text color contrast ratio examples:
+      </p>
       <ul>
-        <li>This text passes with a ratio of 4.75:1. It is hex value #C54949.</li>
-        <li>This may look like it passes color contrast but it's only a ratio of 3.97:1. It is hex value #007BFF.</li>
-        <li>This also fails. It has a ratio of 2.49:1, and a hex value #6FB46A.</li>
+       <li>
+        This text passes with a ratio of 4.75:1. It is hex value #C54949.
+       </li>
+       <li>
+        This may look like it passes color contrast but it's only a ratio of 3.97:1. It is hex value #007BFF.
+       </li>
+       <li>
+        This also fails. It has a ratio of 2.49:1, and a hex value #6FB46A.
+       </li>
       </ul>
-
-      <h3>1.4.11 Non-Text Contrast</h3>
-      <p>The visual presentation of the following has a contrast ratio of at least 3:1 against adjacent color(s):</p>
-      <h4>User Interface Components</h4>
-      <p>Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author.</p>
-      <p><strong>For example:</strong> A group of white social media icons on a black background demonstrating that each icon has a unique user interface component.</p>
-      <p><strong>Note:</strong> If an element changes state, such as after user interaction, then that state must also meet 3:1 color contrast.</p>
-      <h4>Graphical Objects</h4>
-      <p>Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.</p>
-
-      <h3>So, what do we do with logos that have text?</h3>
-      <p>Logos that contain text does not have a contrast requirement.</p>
-
-      <h3>Which other types of text don't have a contrast requirement?</h3>
-      <p>There are four types of "incidental text" defined by WCAG 2.1:</p>
+      <h3>
+       1.4.11 Non-Text Contrast
+      </h3>
+      <p>
+       The visual presentation of the following has a contrast ratio of at least 3:1 against adjacent color(s):
+      </p>
+      <h4>
+       User Interface Components
+      </h4>
+      <p>
+       Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author.
+      </p>
+      <p>
+       <strong>
+        For example:
+       </strong>
+       A group of white social media icons on a black background demonstrating that each icon has a unique user interface component.
+      </p>
+      <p>
+       <strong>
+        Note:
+       </strong>
+       If an element changes state, such as after user interaction, then that state must also meet 3:1 color contrast.
+      </p>
+      <h4>
+       Graphical Objects
+      </h4>
+      <p>
+       Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.
+      </p>
+      <h3>
+       So, what do we do with logos that have text?
+      </h3>
+      <p>
+       Logos that contain text does not have a contrast requirement.
+      </p>
+      <h3>
+       Which other types of text don't have a contrast requirement?
+      </h3>
+      <p>
+       There are four types of "incidental text" defined by WCAG 2.1:
+      </p>
       <ol>
-        <li><strong>Inactive:</strong> This refers to elements like those that are greyed out because they're inactive. These are visually identified by their lower contrast state.</li>
-        <li><strong>Pure decoration:</strong> This is decorative text that is not meant to be read. For example, an image that is blurred. It's not meant to be read.</li>
-        <li><strong>Not visible to anyone:</strong> Text that is meant to be hidden. There is no contrast requirement until is becomes visible.</li>
-        <li><strong>Part of a picture that contains significant other visual content:</strong> This refers to text in the picture that is not an important part of the image. This rule can be a difficult one. You will have to determine the context of the image and then make a decision on whether the text is important.</li>
+       <li>
+        <strong>
+         Inactive:
+        </strong>
+        This refers to elements like those that are greyed out because they're inactive. These are visually identified by their lower contrast state.
+       </li>
+       <li>
+        <strong>
+         Pure decoration:
+        </strong>
+        This is decorative text that is not meant to be read. For example, an image that is blurred. It's not meant to be read.
+       </li>
+       <li>
+        <strong>
+         Not visible to anyone:
+        </strong>
+        Text that is meant to be hidden. There is no contrast requirement until is becomes visible.
+       </li>
+       <li>
+        <strong>
+         Part of a picture that contains significant other visual content:
+        </strong>
+        This refers to text in the picture that is not an important part of the image. This rule can be a difficult one. You will have to determine the context of the image and then make a decision on whether the text is important.
+       </li>
       </ol>
-    </div>
-      </div>
+     </div>
     </details>
-  </section>
-
-  <section class="content-section" aria-labelledby="color-heading">
-    <details class="content-accordion">
-      <summary><span role="heading" aria-level="2" class="accordion-title">Use of Color</span></summary>
-      <div class="accordion-content">
-    <div class="prose">
-      <p><strong>WCAG Success Criteria 1.4.1</strong> says that color is not used as the only means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.</p>
+    <details class="accessible-accordion">
+     <summary>
+      Use of Color
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       <strong>
+        WCAG Success Criteria 1.4.1
+       </strong>
+       says that color is not used as the only means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
+      </p>
       <figure>
-        <img src="https://bruinlearn.ucla.edu/courses/240634/files/25373514/preview" alt="Graph with two lines of the same width, one red and one green, illustrating information communicated by color alone.">
+       <img alt="Graph with two lines of the same width, one red and one green, illustrating information communicated by color alone." src="https://bruinlearn.ucla.edu/courses/240634/files/25373514/preview"/>
       </figure>
-      <p>Color alone is used to describe the graph above. So, why is that bad? Because people who are colorblind can't tell the two lines apart. They look like the following graph:</p>
+      <p>
+       Color alone is used to describe the graph above. So, why is that bad? Because people who are colorblind can't tell the two lines apart. They look like the following graph:
+      </p>
       <figure>
-        <img src="https://bruinlearn.ucla.edu/courses/240634/files/25373528/preview" alt="Graph showing two lines that appear green and the same width, illustrating how the red and green lines may be indistinguishable to some colorblind users.">
+       <img alt="Graph showing two lines that appear green and the same width, illustrating how the red and green lines may be indistinguishable to some colorblind users." src="https://bruinlearn.ucla.edu/courses/240634/files/25373528/preview"/>
       </figure>
-      <p>The graph is to illustrate that the graph with a red and green line looks the same as a graph with two green lines to red colorblind users. The graph shows two green lines with the same width. This is also inaccessible. If a triangle shape was added to one line instead of a dot for the data point, it would be accessible.</p>
-    </div>
-      </div>
+      <p>
+       The graph is to illustrate that the graph with a red and green line looks the same as a graph with two green lines to red colorblind users. The graph shows two green lines with the same width. This is also inaccessible. If a triangle shape was added to one line instead of a dot for the data point, it would be accessible.
+      </p>
+     </div>
     </details>
-  </section>
-
-  <section class="content-section" aria-labelledby="readable-heading">
-    <details class="content-accordion">
-      <summary><span role="heading" aria-level="2" class="accordion-title">Readable Text, Lists, and Links</span></summary>
-      <div class="accordion-content">
-    <div class="prose">
-      <figure>
-        <img src="https://bruinlearn.ucla.edu/courses/240634/files/25324435/preview" alt="">
-      </figure>
-
-      <h3>Use Readable Text and Formatting</h3>
-      <p>Accessibility also involves making the document comfortable to read.</p>
-      <p>Choose clear, readable fonts and maintain sufficient font size.</p>
-      <p>Avoid excessive use of:</p>
+    <details class="accessible-accordion">
+     <summary>
+      Readable Text, Lists, and Links
+     </summary>
+     <div class="accessible-accordion-content">
+      <h3>
+       Use Readable Text and Formatting
+      </h3>
+      <p>
+       Accessibility also involves making the document comfortable to read.
+      </p>
+      <p>
+       Choose clear, readable fonts and maintain sufficient font size.
+      </p>
+      <p>
+       Avoid excessive use of:
+      </p>
       <ul>
-        <li>ALL CAPS</li>
-        <li>Italics</li>
-        <li>Underlining</li>
-        <li>Decorative fonts</li>
-        <li>Dense blocks of text</li>
+       <li>
+        ALL CAPS
+       </li>
+       <li>
+        Italics
+       </li>
+       <li>
+        Underlining
+       </li>
+       <li>
+        Decorative fonts
+       </li>
+       <li>
+        Dense blocks of text
+       </li>
       </ul>
-      <p>Use adequate spacing and break long sections into shorter paragraphs.</p>
-
-      <h3>Use Built-In Lists</h3>
-      <p>Lists are an effective way to organize related information, break up dense content, and make documents easier to scan. But just as text that <em>looks</em> like a heading is not necessarily a true heading, text that <em>looks</em> like a list may not actually contain list structure.</p>
-      <p>When creating a list in Microsoft Word or Google Docs, always use the application's built-in bulleted or numbered list tools rather than manually typing bullets, dashes, asterisks, or numbers.</p>
-      <p>Built-in list formatting provides underlying structure that assistive technology can recognize. A screen reader can communicate that the user has entered a list, how many items the list contains, and where individual list items begin and end. This gives the reader important context about how the information is organized.</p>
-      <p><strong>Don't Use Lists Just for Appearance.</strong> Lists should communicate a meaningful relationship among items. Avoid using bullets simply to indent text or create a particular visual layout.</p>
-
-      <h3>Create Meaningful, Descriptive Links</h3>
-      <p>Links are an important part of how we navigate digital documents. They connect students to readings, assignments, websites, videos, course resources, and other information. The words you choose for a hyperlink—known as link text—should clearly communicate where the link leads or what will happen when the student selects it.</p>
-      <p>A descriptive link should make sense on its own, without requiring the reader to interpret the surrounding sentence.</p>
-      <p>For example:</p>
-      <p>To review the assignment requirements, <a href="#">click here</a>.</p>
-      <p>The words <em>click here</em> provide no information about the destination. A more accessible approach incorporates the destination into the link itself:</p>
-      <p><strong>Review the Final Project Assignment Requirements.</strong></p>
-      <p>This is especially important for people who use screen readers. Rather than reading an entire document from beginning to end, a screen-reader user may navigate directly from one link to another or generate a list of the links contained in a document. When links are presented outside their surrounding context, a list such as <em>click here, read more, learn more,</em> and <em>more information</em> provides very little useful information.</p>
-      <p>Compare that experience with encountering links named:</p>
+      <p>
+       Use adequate spacing and break long sections into shorter paragraphs.
+      </p>
+      <h3>
+       Use Built-In Lists
+      </h3>
+      <p>
+       Lists are an effective way to organize related information, break up dense content, and make documents easier to scan. But just as text that
+       <em>
+        looks
+       </em>
+       like a heading is not necessarily a true heading, text that
+       <em>
+        looks
+       </em>
+       like a list may not actually contain list structure.
+      </p>
+      <p>
+       When creating a list in Microsoft Word or Google Docs, always use the application's built-in bulleted or numbered list tools rather than manually typing bullets, dashes, asterisks, or numbers.
+      </p>
+      <p>
+       Built-in list formatting provides underlying structure that assistive technology can recognize. A screen reader can communicate that the user has entered a list, how many items the list contains, and where individual list items begin and end. This gives the reader important context about how the information is organized.
+      </p>
+      <p>
+       <strong>
+        Don't Use Lists Just for Appearance.
+       </strong>
+       Lists should communicate a meaningful relationship among items. Avoid using bullets simply to indent text or create a particular visual layout.
+      </p>
+      <h3>
+       Create Meaningful, Descriptive Links
+      </h3>
+      <p>
+       Links are an important part of how we navigate digital documents. They connect students to readings, assignments, websites, videos, course resources, and other information. The words you choose for a hyperlink&mdash;known as link text&mdash;should clearly communicate where the link leads or what will happen when the student selects it.
+      </p>
+      <p>
+       A descriptive link should make sense on its own, without requiring the reader to interpret the surrounding sentence.
+      </p>
+      <p>
+       For example:
+      </p>
+      <p>
+       To review the assignment requirements,
+       <a href="#">
+        click here
+       </a>
+       .
+      </p>
+      <p>
+       The words
+       <em>
+        click here
+       </em>
+       provide no information about the destination. A more accessible approach incorporates the destination into the link itself:
+      </p>
+      <p>
+       <strong>
+        Review the Final Project Assignment Requirements.
+       </strong>
+      </p>
+      <p>
+       This is especially important for people who use screen readers. Rather than reading an entire document from beginning to end, a screen-reader user may navigate directly from one link to another or generate a list of the links contained in a document. When links are presented outside their surrounding context, a list such as
+       <em>
+        click here, read more, learn more,
+       </em>
+       and
+       <em>
+        more information
+       </em>
+       provides very little useful information.
+      </p>
+      <p>
+       Compare that experience with encountering links named:
+      </p>
       <ul>
-        <li>Download the Course Syllabus (Word)</li>
-        <li>Review the Final Project Instructions</li>
-        <li>Visit the TLC Digital Accessibility Resources</li>
-        <li>Register for the Accessibility Workshop</li>
+       <li>
+        Download the Course Syllabus (Word)
+       </li>
+       <li>
+        Review the Final Project Instructions
+       </li>
+       <li>
+        Visit the TLC Digital Accessibility Resources
+       </li>
+       <li>
+        Register for the Accessibility Workshop
+       </li>
       </ul>
-      <p>The purpose of each link is immediately apparent. Descriptive link text benefits other readers as well because it makes a document easier to scan and helps students locate resources quickly.</p>
-
-      <h4>Write the Destination, Not the Direction</h4>
-      <p>One useful way to think about link text is to focus on the destination or action rather than instructions for operating the link.</p>
-      <p>Instead of writing: "Click here to download the syllabus", write: "Download the Course Syllabus".</p>
-      <p>Instead of: "For more information about the assignment, read more", write: "Review the Research Assignment Guidelines".</p>
-      <p>Words such as <em>click here</em> also assume that the user is interacting with the document using a mouse. A student might instead activate a link with a keyboard, touchscreen, voice command, or assistive technology. Describing the destination avoids making assumptions about how someone interacts with the document.</p>
-
-      <h4>Avoid Using the URL as the Link Text</h4>
-      <p>Long web addresses can also create accessibility and readability problems when they are placed directly into the body of a document.</p>
-      <p>Instead of displaying a long web address, use meaningful text such as: "Review the Accessible Documents Guide".</p>
-      <p>There are situations in which displaying the full URL may be appropriate—for example, when a document will be printed and readers will need the web address. For primarily digital documents, however, descriptive link text is usually the better choice.</p>
-
-      <h4>Avoid Repeating Generic Link Names</h4>
-      <p>Link text should also help distinguish one destination from another.</p>
-      <p>Imagine a document containing several resources labeled: "Learn More". Even though each link may lead somewhere different, the link text does not communicate those differences.</p>
-      <p>Instead, identify each resource. For example: "Learn More About Alternative Text" or "Learn More About Color Contrast". This gives each link a meaningful identity and makes navigation more efficient.</p>
-
-      <h4>Include Useful Information in the Link Text</h4>
-      <p>When appropriate, tell students what they are opening or downloading.</p>
-      <p>For example: "Download the Accessible Documents Checklist (PDF)" or "Download the Assignment Template (Word)".</p>
-      <p>Including the file type can help students know what to expect before opening or downloading the resource.</p>
-      <p>The same principle applies when the link performs an action. Link text such as "Register for the Workshop, Email the Course Instructor, or Download the Syllabus" communicates both the purpose and expected result.</p>
-
-      <h4>Keep Link Text Concise</h4>
-      <p>Descriptive does not mean excessively long. The goal is to provide enough information to understand the purpose of the link without turning an entire paragraph into a hyperlink.</p>
-      <p>For example: "Review the Week 3 Assignment Instructions" is more useful than linking a full sentence such as: "Click here if you would like to review all of the instructions and requirements for the assignment that is due during Week 3".</p>
-      <p>Aim for link text that is specific, concise, and meaningful when read independently.</p>
-    </div>
-      </div>
+      <p>
+       The purpose of each link is immediately apparent. Descriptive link text benefits other readers as well because it makes a document easier to scan and helps students locate resources quickly.
+      </p>
+      <h4>
+       Write the Destination, Not the Direction
+      </h4>
+      <p>
+       One useful way to think about link text is to focus on the destination or action rather than instructions for operating the link.
+      </p>
+      <p>
+       Instead of writing: "Click here to download the syllabus", write: "Download the Course Syllabus".
+      </p>
+      <p>
+       Instead of: "For more information about the assignment, read more", write: "Review the Research Assignment Guidelines".
+      </p>
+      <p>
+       Words such as
+       <em>
+        click here
+       </em>
+       also assume that the user is interacting with the document using a mouse. A student might instead activate a link with a keyboard, touchscreen, voice command, or assistive technology. Describing the destination avoids making assumptions about how someone interacts with the document.
+      </p>
+      <h4>
+       Avoid Using the URL as the Link Text
+      </h4>
+      <p>
+       Long web addresses can also create accessibility and readability problems when they are placed directly into the body of a document.
+      </p>
+      <p>
+       Instead of displaying a long web address, use meaningful text such as: "Review the Accessible Documents Guide".
+      </p>
+      <p>
+       There are situations in which displaying the full URL may be appropriate&mdash;for example, when a document will be printed and readers will need the web address. For primarily digital documents, however, descriptive link text is usually the better choice.
+      </p>
+      <h4>
+       Avoid Repeating Generic Link Names
+      </h4>
+      <p>
+       Link text should also help distinguish one destination from another.
+      </p>
+      <p>
+       Imagine a document containing several resources labeled: "Learn More". Even though each link may lead somewhere different, the link text does not communicate those differences.
+      </p>
+      <p>
+       Instead, identify each resource. For example: "Learn More About Alternative Text" or "Learn More About Color Contrast". This gives each link a meaningful identity and makes navigation more efficient.
+      </p>
+      <h4>
+       Include Useful Information in the Link Text
+      </h4>
+      <p>
+       When appropriate, tell students what they are opening or downloading.
+      </p>
+      <p>
+       For example: "Download the Accessible Documents Checklist (PDF)" or "Download the Assignment Template (Word)".
+      </p>
+      <p>
+       Including the file type can help students know what to expect before opening or downloading the resource.
+      </p>
+      <p>
+       The same principle applies when the link performs an action. Link text such as "Register for the Workshop, Email the Course Instructor, or Download the Syllabus" communicates both the purpose and expected result.
+      </p>
+      <h4>
+       Keep Link Text Concise
+      </h4>
+      <p>
+       Descriptive does not mean excessively long. The goal is to provide enough information to understand the purpose of the link without turning an entire paragraph into a hyperlink.
+      </p>
+      <p>
+       For example: "Review the Week 3 Assignment Instructions" is more useful than linking a full sentence such as: "Click here if you would like to review all of the instructions and requirements for the assignment that is due during Week 3".
+      </p>
+      <p>
+       Aim for link text that is specific, concise, and meaningful when read independently.
+      </p>
+     </div>
     </details>
-  </section>
-
-  <section class="content-section" aria-labelledby="tables-heading">
-    <details class="content-accordion">
-      <summary><span role="heading" aria-level="2" class="accordion-title">Tables</span></summary>
-      <div class="accordion-content">
-    <div class="prose">
-      <figure>
-        <img src="https://bruinlearn.ucla.edu/courses/240634/files/25324435/preview" alt="">
-      </figure>
-      <p>Tables should be used to organize data, not to control the visual layout of a document.</p>
-      <p>One of the most important steps in creating an accessible table is identifying the appropriate header row, and when applicable, header column. Headers tell the reader what the data represents.</p>
-      <p><strong>Note:</strong> There is no way to create an accessible table in Google Docs because the user is unable to tag row and column headers.</p>
-      <p>In Microsoft Word, create a table by using <strong>Insert &gt; Table</strong>. Be sure to check the box to identify the first row as the header row.</p>
-      <p>Be sure to write a meaningful title to introduce the table.</p>
-      <p>If your table continues across multiple tables, configure the header row to repeat at the top of each page.</p>
-
-      <h3>Items to avoid when creating a table</h3>
+    <details class="accessible-accordion">
+     <summary>
+      Tables
+     </summary>
+     <div class="accessible-accordion-content">
+      <p>
+       Tables should be used to organize data, not to control the visual layout of a document.
+      </p>
+      <p>
+       One of the most important steps in creating an accessible table is identifying the appropriate header row, and when applicable, header column. Headers tell the reader what the data represents.
+      </p>
+      <p>
+       <strong>
+        Note:
+       </strong>
+       There is no way to create an accessible table in Google Docs because the user is unable to tag row and column headers.
+      </p>
+      <p>
+       In Microsoft Word, create a table by using
+       <strong>
+        Insert &gt; Table
+       </strong>
+       . Be sure to check the box to identify the first row as the header row.
+      </p>
+      <p>
+       Be sure to write a meaningful title to introduce the table.
+      </p>
+      <p>
+       If your table continues across multiple tables, configure the header row to repeat at the top of each page.
+      </p>
+      <h3>
+       Items to avoid when creating a table
+      </h3>
       <ul>
-        <li>Merged cells</li>
-        <li>Split cells</li>
-        <li>Multiple levels of column headings</li>
-        <li>Blank rows or columns used for spacing</li>
-        <li>Nested tables</li>
-        <li>Irregular arrangement of cells</li>
-        <li>Blank cells (instead use a term such as "No data")</li>
-        <li>Using color alone to convey meaning</li>
+       <li>
+        Merged cells
+       </li>
+       <li>
+        Split cells
+       </li>
+       <li>
+        Multiple levels of column headings
+       </li>
+       <li>
+        Blank rows or columns used for spacing
+       </li>
+       <li>
+        Nested tables
+       </li>
+       <li>
+        Irregular arrangement of cells
+       </li>
+       <li>
+        Blank cells (instead use a term such as "No data")
+       </li>
+       <li>
+        Using color alone to convey meaning
+       </li>
       </ul>
-      <p>If your table is complicated, ask yourself whether it can be divided into two or more tables.</p>
-      <p>Test that you can navigate your table by using your keyboard to tab to each cell. The order should be from top left to bottom right.</p>
-    </div>
-      </div>
+      <p>
+       If your table is complicated, ask yourself whether it can be divided into two or more tables.
+      </p>
+      <p>
+       Test that you can navigate your table by using your keyboard to tab to each cell. The order should be from top left to bottom right.
+      </p>
+     </div>
     </details>
-  </section>
-
-
-ultiple tables, configure the header row to repeat at the top of each page.</p>
-
-      <h3>Items to avoid when creating a table</h3>
-      <ul>
-        <li>Merged cells</li>
-        <li>Split cells</li>
-        <li>Multiple levels of column headings</li>
-        <li>Blank rows or columns used for spacing</li>
-        <li>Nested tables</li>
-        <li>Irregular arrangement of cells</li>
-        <li>Blank cells (instead use a term such as "No data")</li>
-        <li>Using color alone to convey meaning</li>
-      </ul>
-      <p>If your table is complicated, ask yourself whether it can be divided into two or more tables.</p>
-      <p>Test that you can navigate your table by using your keyboard to tab to each cell. The order should be from top left to bottom right.</p>
-    </div>
-  </section>
-
-  <section class="content-section" aria-labelledby="takeaways-heading">
+   </section>
+   <section aria-labelledby="takeaways-heading" class="content-section">
     <div class="section-heading">
-      <h2 id="takeaways-heading">Key Takeaways</h2>
-      <p>Remember these key principles when creating instructional documents:</p>
+     <h2 id="takeaways-heading">
+      Key Takeaways
+     </h2>
+     <p>
+      Remember these key principles when creating instructional documents:
+     </p>
     </div>
-    <div class="prose">
-      <figure>
-        <img src="https://bruinlearn.ucla.edu/courses/240634/files/25324435/preview" alt="">
-      </figure>
-      <ul>
-        <li>Use structure, not appearance, to communicate organization.</li>
-        <li>Use built-in heading styles and list tools.</li>
-        <li>Use descriptive link text.</li>
-        <li>Create tables using appropriate table features and header rows.</li>
-        <li>Avoid nested tables and merged cells.</li>
-        <li>Add alternative text to meaningful images, charts, and graphics.</li>
-        <li>Provide long descriptions for complex data visualizations when needed.</li>
-        <li>Do not rely on color alone to communicate information.</li>
-        <li>Use clear, readable text and sufficient color contrast.</li>
-        <li>If you want to use a PDF, make sure it's the format that is appropriate.</li>
-        <li>Check PDFs for tags, reading order, titles, alternative text, and table structure.</li>
-        <li>Give spreadsheets a clear and logical structure.</li>
-        <li>Use accessibility checkers to identify and correct issues in the final format that students will receive.</li>
-        <li>Always review the document manually in addition to using an accessibility checker. There are items that automation can't check or will check but get it wrong!</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="content-section" aria-labelledby="resources-heading">
+       <ul>
+     <li>
+      Use structure, not appearance, to communicate organization.
+     </li>
+     <li>
+      Use built-in heading styles and list tools.
+     </li>
+     <li>
+      Use descriptive link text.
+     </li>
+     <li>
+      Create tables using appropriate table features and header rows.
+     </li>
+     <li>
+      Avoid nested tables and merged cells.
+     </li>
+     <li>
+      Add alternative text to meaningful images, charts, and graphics.
+     </li>
+     <li>
+      Provide long descriptions for complex data visualizations when needed.
+     </li>
+     <li>
+      Do not rely on color alone to communicate information.
+     </li>
+     <li>
+      Use clear, readable text and sufficient color contrast.
+     </li>
+     <li>
+      If you want to use a PDF, make sure it's the format that is appropriate.
+     </li>
+     <li>
+      Check PDFs for tags, reading order, titles, alternative text, and table structure.
+     </li>
+     <li>
+      Give spreadsheets a clear and logical structure.
+     </li>
+     <li>
+      Use accessibility checkers to identify and correct issues in the final format that students will receive.
+     </li>
+     <li>
+      Always review the document manually in addition to using an accessibility checker. There are items that automation can't check or will check but get it wrong!
+     </li>
+    </ul>
+   </section>
+   <section aria-labelledby="resources-heading" class="content-section">
     <div class="section-heading">
-      <h2 id="resources-heading">Additional Resources</h2>
+     <h2 id="resources-heading">
+      Additional Resources
+     </h2>
     </div>
-    <div class="prose">
-      <figure>
-        <img src="https://bruinlearn.ucla.edu/courses/240634/files/25324435/preview" alt="">
-      </figure>
-      <ul>
-        <li><a href="https://support.microsoft.com/en-us/accessibility/word/make-your-word-documents-accessible-to-people-with-disabilities" target="_blank" rel="noopener">Microsoft: Make your Word documents accessible to people with disabilities</a></li>
-        <li><a href="https://www.section508.gov/create/documents/" target="_blank" rel="noopener">Section 508: Microsoft Word 365 Authoring and Testing Guide</a></li>
-        <li><a href="https://www.boia.org/blog/creating-accessible-documents-in-google-docs" target="_blank" rel="noopener">Bureau of Internet Accessibility: Creating Accessible Documents in Google Docs</a></li>
-      </ul>
-    </div>
-  </section>
 
-  <section class="content-section">
+    <ul>
+     <li>
+      <a href="https://support.microsoft.com/en-us/accessibility/word/make-your-word-documents-accessible-to-people-with-disabilities" rel="noopener" target="_blank">
+       Microsoft: Make your Word documents accessible to people with disabilities
+      </a>
+     </li>
+     <li>
+      <a href="https://www.section508.gov/create/documents/" rel="noopener" target="_blank">
+       Section 508: Microsoft Word 365 Authoring and Testing Guide
+      </a>
+     </li>
+     <li>
+      <a href="https://www.boia.org/blog/creating-accessible-documents-in-google-docs" rel="noopener" target="_blank">
+       Bureau of Internet Accessibility: Creating Accessible Documents in Google Docs
+      </a>
+     </li>
+    </ul>
+   </section>
+   <section class="content-section">
     <div class="support-banner">
-      <div class="support-banner-text">
-        <h2>Need accessibility help?</h2>
-        <p>Contact the accessibility team for guidance, consultation, or assistance.</p>
-      </div>
-      <a class="support-button" href="support.html">Get accessibility support</a>
+     <div class="support-banner-text">
+      <h2>
+       Need accessibility help?
+      </h2>
+      <p>
+       Contact the accessibility team for guidance, consultation, or assistance.
+      </p>
+     </div>
+     <a class="support-button" href="support.html">
+      Get accessibility support
+     </a>
     </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <p>&copy; UCLA — Digital Accessibility</p>
-    <nav class="footer-nav" aria-label="Footer navigation">
-      <ul>
-        <li><a href="accessibility.html">Accessibility</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <div class="footer-inner">
+    <p>
+     &copy; UCLA &mdash; Digital Accessibility
+    </p>
+    <nav aria-label="Footer navigation" class="footer-nav">
+     <ul>
+      <li>
+       <a href="accessibility.html">
+        Accessibility
+       </a>
+      </li>
+      <li>
+       <a href="privacy.html">
+        Privacy
+       </a>
+      </li>
+      <li>
+       <a href="contact.html">
+        Contact
+       </a>
+      </li>
+     </ul>
     </nav>
-  </div>
-</footer>
-
-<script src="search.js" defer></script>
-</body>
+   </div>
+  </footer>
+  <script defer="" src="search.js">
+  </script>
+ </body>
 </html>

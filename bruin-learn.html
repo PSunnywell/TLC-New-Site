@@ -1,31 +1,190 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Build accessible course content, pages, assignments, quizzes, and learning activities in Bruin Learn."><title>Bruin Learn | UCLA Digital Accessibility</title><link rel="stylesheet" href="styles.css"></head><body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guidance for creating accessible course content in Bruin Learn.">
+  <title>Bruin Learn | UCLA Digital Accessibility</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .accordion-list { display: grid; gap: 1rem; margin-top: 1.25rem; }
+    .accordion-item { border: 1px solid #d5dbe0; border-radius: .35rem; background: #fff; overflow: hidden; }
+    .accordion-item summary { cursor: pointer; padding: 1rem 1.15rem; font-size: 1.15rem; font-weight: 700; color: #005587; background: #f5f7f8; }
+    .accordion-item summary:hover { background: #eef2f4; }
+    .accordion-item summary:focus-visible { outline: 3px solid #ffd100; outline-offset: -3px; }
+    .accordion-content { padding: .25rem 1.25rem 1.25rem; }
+    .accordion-content h3 { margin-top: 1.4rem; }
+    .accordion-content h4 { margin-top: 1.15rem; }
+    .example-block { border-left: 4px solid #2774ae; padding: .75rem 1rem; margin: 1rem 0; background: #f7f9fb; }
+    .workflow { font-weight: 700; }
+  </style>
+</head>
+<body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header"><div class="header-inner">
-<a class="site-brand" href="TLC website2.html" aria-label="UCLA Digital Accessibility home">
-        <img class="site-brand-logo" src="images/logo_UCLA_blue_boxed.png" alt="UCLA">
-        <span class="site-brand-text">
-          Teaching and Learning Center
-          <small>Resources and support</small>
-        </span>
-      </a>
-<nav class="primary-nav" aria-label="Primary navigation"><ul><li><a href="index.html">Home</a></li><li><a href="resources.html">Resources</a></li><li><a href="training.html">Training</a></li><li><a href="support.html">Get Help</a></li></ul></nav>
-</div><div class="site-search-row">
-  <search class="site-search" role="search">
-    <form action="search.html" method="get">
-      <label for="site-search-input">Search the site</label>
-      <input id="site-search-input" name="q" type="search" placeholder="Search the site" autocomplete="off">
-      <button type="submit">Search</button>
-    </form>
-  </search>
-</div>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-brand" href="index.html" aria-label="UCLA Digital Accessibility home">
+      <img class="site-brand-logo" src="images/logo_UCLA_blue_boxed.png" alt="UCLA">
+      <span class="site-brand-text">Teaching and Learning Center<small>Resources and support</small></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation"><ul>
+      <li><a href="index.html">Home</a></li><li><a href="resources.html">Resources</a></li><li><a href="training.html">Training</a></li><li><a href="support.html">Get Help</a></li>
+    </ul></nav>
+  </div>
+  <div class="site-search-row"><search class="site-search" role="search"><form action="search.html" method="get">
+    <label for="site-search-input">Search the site</label><input id="site-search-input" name="q" type="search" placeholder="Search the site" autocomplete="off"><button type="submit">Search</button>
+  </form></search></div>
 </header>
-<section class="page-hero" aria-labelledby="page-title"><div class="page-hero-inner"><div class="breadcrumbs"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Bruin Learn</span></div><span class="eyebrow">Digital Accessibility</span><h1 id="page-title">Bruin Learn</h1><p>Build accessible course content, pages, assignments, quizzes, and learning activities in Bruin Learn.</p></div></section>
-<main id="main-content"><section class="content-section" aria-labelledby="topics-heading"><div class="section-heading"><h2 id="topics-heading">Explore related resources</h2><p>Choose a topic below. Each entire box is a single keyboard-focusable link.</p></div><div class="topic-grid"><a class="topic-card" href="slide-presentations.html"><h3>Slide Presentations</h3><p>Create slide decks that are readable, navigable, and usable with assistive technology.</p></a>
-<a class="topic-card" href="documents.html"><h3>Documents</h3><p>Prepare accessible Word documents, PDFs, spreadsheets, and other files.</p></a>
-<a class="topic-card" href="bruin-learn.html"><h3>Bruin Learn</h3><p>Build accessible course content, pages, assignments, quizzes, and learning activities in Bruin Learn.</p></a>
-<a class="topic-card" href="media.html"><h3>Media</h3><p>Make video and audio accessible with captions, transcripts, descriptions, and usable players.</p></a>
-<a class="topic-card" href="alt-text.html"><h3>Alt Text</h3><p>Write concise, meaningful alternative text for images, charts, and other visual content.</p></a></div></section><section class="content-section"><div class="support-banner"><div class="support-banner-text"><h2>Need accessibility help?</h2><p>Contact the accessibility team for guidance, consultation, or assistance.</p></div><a class="support-button" href="support.html">Get accessibility support</a></div></section></main>
+<section class="page-hero" aria-labelledby="page-title"><div class="page-hero-inner">
+  <div class="breadcrumbs"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <a href="accessible-course-materials-fixed.html">Accessible Course Materials</a> <span aria-hidden="true">/</span> <span>Bruin Learn</span></div>
+  <span class="eyebrow">Accessible Course Materials</span><h1 id="page-title">Bruin Learn</h1><p>Build accessible course content, pages, assignments, discussions, and learning activities in Bruin Learn.</p>
+</div></section>
+<main id="main-content">
+<section class="content-section" aria-labelledby="overview-heading"><div class="prose">
+  <h2 id="overview-heading">Overview</h2>
+  <p>Bruin Learn is often the central hub of a course—a place where students access content, find resources, participate in activities, and navigate their learning experience. Because so much of the course experience happens within Bruin Learn, accessibility should be built into the content we create there from the start.</p>
+  <p>The way we organize and create content in Bruin Learn can therefore have a significant impact on a student's ability to navigate and engage with a course.</p>
+  <p>Creating accessible content is about more than making a page look good. It is about making the page usable. In an online course environment, clear structure provides many of the organizational cues students would otherwise receive in a physical classroom. Consistent organization helps students understand where they are, what information is important, and what they need to do next.</p>
+  <p>In this module, you will learn practical strategies for creating and organizing accessible content in Bruin Learn. We will focus on the accessibility choices instructors can make when building pages, modules, assignments, discussions, and other course content.</p>
+  <p>You will explore how to use headings and page structure, meaningful links, accessible images and alternative text, readable text and color contrast, lists, and tables to make Bruin Learn content easier to navigate and understand. You will also consider how the organization and presentation of your course can affect a student's ability to find information and move through course materials.</p>
+  <p>Finally, you will learn how to use Bruin Learn accessibility checking tools to identify potential accessibility issues and how to review those results to determine what needs to be corrected.</p>
+  <p>The goal is not simply to make individual Bruin Learn pages pass an accessibility check. It is to develop an accessible course-building workflow that considers the entire student experience—from entering a module and navigating content to accessing the information and activities needed to participate in the course.</p>
+
+  <h2>Learning Objectives</h2>
+  <p>By the end of this module, you will be able to:</p>
+  <ul>
+    <li>Organize Bruin Learn course content using clear, consistent page and module structures that support accessible navigation.</li>
+    <li>Apply appropriate heading styles to create a logical content hierarchy that can be navigated with assistive technology.</li>
+    <li>Create meaningful links that clearly communicate their purpose and destination.</li>
+    <li>Add and evaluate alternative text for images and identify when an image should be marked as decorative.</li>
+    <li>Use accessible text formatting and color, including sufficient color contrast and avoiding the use of color alone to communicate meaning.</li>
+    <li>Create accessible lists and tables using Bruin Learn's built-in formatting tools and appropriate structure.</li>
+    <li>Identify common accessibility barriers in Bruin Learn pages, assignments, discussions, and other course content.</li>
+    <li>Use Bruin Learn accessibility checking tools to identify potential issues and determine how to correct them.</li>
+    <li>Apply accessibility practices throughout the course-building process rather than relying on remediation after content has been published.</li>
+  </ul>
+</div></section>
+
+<section class="content-section" aria-labelledby="guidance-heading"><div class="prose">
+<h2 id="guidance-heading">How to Make Bruin Learn Content More Accessible</h2>
+<div class="accordion-list">
+
+<details class="accordion-item"><summary>Why Page Structure Matters</summary><div class="accordion-content">
+<p>When we talk about page structure, we are not simply talking about visual appearance. We are talking about how information is organized and communicated.</p>
+<p>In a physical classroom, students have many contextual cues. An instructor may announce a new topic, write a heading on the board, pause between concepts, or direct students' attention to a particular resource.</p>
+<p>In Bruin Learn, structure provides many of those cues.</p>
+<p>Clear and consistent page structure can:</p><ul><li>Improve navigation.</li><li>Reduce cognitive load.</li><li>Help students locate information more efficiently.</li><li>Support students who use assistive technologies.</li><li>Make content easier to access on different devices.</li><li>Provide consistency and predictability throughout a course.</li></ul>
+<p>These practices can benefit a wide range of learners, including students with disabilities, multilingual learners, students using mobile devices, and students balancing multiple responsibilities.</p>
+<p>Clear structure can benefit instructors as well. When students can easily locate and understand information, there may be fewer questions about where materials are located or what they are expected to do.</p>
+<p>Most importantly, establishing good structure allows us to build accessibility into the course from the beginning instead of repairing inaccessible content later.</p>
+</div></details>
+
+<details class="accordion-item"><summary>Heading Structure</summary><div class="accordion-content">
+<h3>Create a Meaningful Heading Structure</h3>
+<p>Headings help organize digital content into clear sections and communicate how information is related. For students who visually scan a page, headings provide landmarks that make longer content easier to understand. For students using screen readers, properly structured headings provide an important way to navigate efficiently from one section to another.</p>
+<p>A well-structured page uses headings to create a logical hierarchy, similar to an outline. The page title represents the main topic, major sections appear beneath it, and subsections are nested under the section to which they belong.</p>
+<div class="example-block"><strong>For example:</strong><br>H1: Weekly Course Content<br>H2: Learning Objectives<br>H2: Required Materials<br>H2: Activities<br>H3: Discussion<br>H3: Assignment<br>H2: Additional Resources</div>
+<p>In this example, Learning Objectives, Required Materials, Activities, and Additional Resources are major sections of the page, so they are at the same heading level. Discussion and Assignment are subsections of Activities, so they appear one level below it.</p>
+<h3>Use Heading Levels in Order</h3>
+<p>Heading levels should reflect the relationship between sections of content rather than how you want the text to look.</p>
+<p>In Bruin Learn, the page title serves as the primary heading (H1). Begin the content of the page with H2 for major sections and use H3, H4, H5, and H6 for increasingly nested subsections as needed. Do not skip heading levels.</p>
+<div class="example-block"><strong>Correct:</strong> H1 → H2 → H3 → H3 → H2<br><strong>Avoid:</strong> H1 → H3 → H5 → H2</div>
+<p>When a subsection ends and a new major section begins, return to the appropriate higher heading level.</p>
+<h3>Headings Communicate Structure, Not Appearance</h3>
+<p>Avoid using heading styles simply to make text larger, bold, or visually prominent. Likewise, making regular text large and bold does not turn it into a true heading.</p>
+<p>Use a heading when the text introduces a section or subsection of content. Use regular paragraph formatting when the text belongs within that section.</p>
+<p>When headings are used consistently, the structure of the page becomes more predictable and easier to navigate. Screen reader users can also move between headings and review the heading structure to understand how the page is organized without having to read every word.</p>
+</div></details>
+
+<details class="accordion-item"><summary>Make Content Easier to Read</summary><div class="accordion-content">
+<p>Accessible page design also means making information manageable.</p><p>Long, uninterrupted blocks of text can make information difficult to scan and process.</p>
+<p>Break information into:</p><ul><li>Short paragraphs</li><li>Clearly labeled sections</li><li>Meaningful headings</li><li>Bulleted lists</li><li>Numbered lists</li></ul>
+</div></details>
+
+<details class="accordion-item"><summary>Color Contrast</summary><div class="accordion-content">
+<p>Color can make course content visually engaging and help organize information, but poor color choices can create accessibility barriers.</p>
+<p>Color contrast refers to the difference between foreground content—such as text—and its background.</p>
+<h3>WCAG Contrast Ratios</h3><ul><li>Text that is smaller than 18 point should have a contrast ratio of at least 4.5:1.</li><li>Large text—at least 18 point or 14 point bold—should have a contrast ratio of at least 3:1.</li></ul>
+<p>Use the <a href="https://webaim.org/resources/contrastchecker/bookmarklet">WebAIM contrast checker bookmarklet</a> to check contrast rather than relying only on your eyes.</p>
+<p>It is also a good idea to check colors with a colorblindness tool. The <a href="https://chromewebstore.google.com/detail/ffmdflnkahdfgkhneidigopdlokgipki?utm_source=item-share-cb">Colorblindness Emulator</a> can be found in the Chrome Web Store and added to your toolbar.</p>
+<p>If you are creating data visualizations, remember that you must not only check the text color against the background but also the marker for data points against the background and against adjacent markers. A tool to help with choosing many colors that meet color contrast adjacent to one another is the <a href="https://www.lisagaudette.com/Projects/Colours/contrast_matrix.html">Colour Contrast Matrix Generator</a>.</p>
+<h3>Don't Communicate Meaning With Color Alone</h3>
+<p>Imagine an assignment page that says:</p><div class="example-block">Items in red are required. Items in green are optional.</div>
+<p>If a student cannot perceive the difference between those colors, the distinction disappears.</p>
+<p>Instead, combine color with another way of communicating the information:</p><div class="example-block"><strong>REQUIRED:</strong> Submit Reflection Paper<br><strong>OPTIONAL:</strong> Review Supplemental Reading</div>
+<p>You can still use color—but the information should remain understandable without it. Pair color with another visual or textual indicator, such as labels or patterns.</p>
+</div></details>
+
+<details class="accordion-item"><summary>Create Descriptive Links</summary><div class="accordion-content">
+<p>Links are another small design decision that can make a significant difference in accessibility.</p>
+<p>A descriptive link tells the user where the link will take them or what will happen when they activate it.</p>
+<p>Avoid vague links such as:</p><ul><li>Click here</li><li>Read more</li><li>More information</li></ul>
+<p>Also avoid pasting a long URL directly onto the page when meaningful link text can be used instead.</p>
+<p>Instead, write the link so that its purpose is clear. For example:</p><ul><li>Download the Course Syllabus (PDF)</li><li>View Week 4 Assignment Instructions</li></ul>
+<p>These links make sense even when they are read independently from the surrounding paragraph.</p>
+<h3>Why Does This Matter?</h3><p>Screen reader users can navigate through a page by generating a list of its links.</p>
+<div class="example-block"><strong>Less useful:</strong><br>Click here<br>Click here<br>Read more<br>Click here</div>
+<div class="example-block"><strong>More useful:</strong><br>Download the Course Syllabus<br>View Week 4 Assignment Instructions<br>Review the Accessibility Checklist</div>
+<p>Descriptive links also make pages easier for everyone to scan and reduce the amount of surrounding information a student must process to understand what a link does.</p>
+</div></details>
+
+<details class="accordion-item"><summary>Adding Other Objects</summary><div class="accordion-content">
+<p>The images, tables, audio, and video you add to a page must also be accessible so that students can obtain the information they communicate.</p>
+<p>As you add these elements, consider whether important information is available in more than one way. Images should have appropriate text alternatives, tables should communicate relationships between data and headers, and audio and video should provide access to meaningful spoken and visual information.</p>
+<p>The following practices will help ensure that the content you embed or add to Bruin Learn does not introduce new accessibility barriers.</p>
+<h3>Images</h3><p>Provide appropriate alternative text for meaningful images so students who cannot see the image can access its purpose or meaning.</p><p>Decorative images should be identified appropriately so assistive technology does not unnecessarily announce them.</p>
+<h3>Tables</h3><p>Use tables for data, rather than using them simply to arrange content visually.</p><p>When you do use a data table, identify the appropriate header row or column so relationships within the table can be understood by assistive technology.</p>
+<h3>Audio and Video</h3><p>Provide appropriate accessible alternatives for media, including captions and/or transcripts, as applicable.</p>
+</div></details>
+
+<details class="accordion-item"><summary>Alternative Formats</summary><div class="accordion-content">
+<p>Within Bruin Learn, students are able to download certain course material in formats that may better meet their individual learning or access needs. Depending on the source content, available formats include:</p>
+<ul><li>OCR'ed versions of scanned documents</li><li>Tagged PDF</li><li>Electronic Braille</li><li>Audio</li><li>ePub</li><li>BeeLine Reader</li><li>Mobile-friendly HTML</li><li>Immersive Reader</li></ul>
+</div></details>
+
+<details class="accordion-item"><summary>Kaltura</summary><div class="accordion-content">
+<p>Kaltura is a video hosting and streaming service integrated in Bruin Learn. Some of its benefits include:</p>
+<ul><li>No upload file size limit.</li><li>No storage limit.</li><li>Auto-generated captions. Refer to <a href="https://uclaprod2.service-now.com/kb_view.do?sysparm_article=KB0015106">this guide to learn how to edit captions in Kaltura</a>.</li><li>Ability to embed video, audio, and images wherever the Rich Content Editor is available in your course.</li><li>Publishing of your media in the Bruin Learn Media Gallery. This means that you'll have the capability to create video playlists, video quizzes, etc.</li><li>Instructors have the opportunity to <a href="https://uclaprod2.service-now.com/kb_view.do?sysparm_article=KB0015278">opt-in to saving Zoom cloud recordings to Kaltura</a>.</li></ul>
+</div></details>
+
+<details class="accordion-item"><summary>Bruin Learn's Accessibility Checkers</summary><div class="accordion-content">
+<h3>Ally</h3>
+<p>Bruin Learn includes Ally, an accessibility tool that can help instructors identify accessibility issues in course content.</p>
+<p>The Ally Course Accessibility Report can be made visible through:</p><div class="example-block">Settings → Navigation → Ally Course Accessibility Report</div>
+<p>The report provides an overall course accessibility score and information that can help identify content requiring attention.</p>
+<p>Think of Ally as a tool that can help you find potential barriers and prioritize remediation. It is not a replacement for learning how to create accessible content.</p>
+<p>Check out the UCLA Teaching and Learning Center's course <a href="https://teaching.ucla.edu/making-your-course-accessible/checking-for-accessibility">Making Your Course Accessible</a> for information on which items are checked by Ally and <a href="https://teaching.ucla.edu/making-your-course-accessible/checking-for-accessibility">a video on how to use the Ally Course Accessibility Report</a>.</p>
+<h3>Ally Feedback in the Rich Content Editor</h3>
+<p>Ally can also provide accessibility feedback while you work within Bruin Learn's Rich Content Editor (RCE).</p><p>This can apply to content created in areas such as:</p><ul><li>Pages</li><li>Assignments</li><li>Announcements</li><li>Quizzes</li><li>Discussions</li></ul>
+<p>Ally's feedback for Rich Content Editor content includes:</p><ul><li>A live accessibility score.</li><li>Suggestions for addressing issues such as missing alt text, insufficient color contrast, and incorrect heading structure.</li><li>Accessibility score updates as issues are remediated.</li></ul>
+<p>This creates an opportunity to address accessibility while creating or editing content, rather than discovering problems after the course has already been published.</p>
+<h3>UDOIT</h3><h4>Using UDOIT to Check Your Course</h4>
+<p>Creating accessible content from the beginning is the best approach, but accessibility checking tools can help you identify barriers that may have been overlooked. UDOIT (Universal Design Online content Inspection Tool) is an accessibility checking tool designed for Canvas courses.</p>
+<p>UDOIT can evaluate course content and identify potential accessibility concerns that instructors can review and remediate. Rather than checking only one page at a time, UDOIT can help instructors examine accessibility issues across course content and determine where additional attention may be needed.</p>
+<h4>What Can UDOIT Help You Find?</h4><p>Depending on the version and configuration available in your Canvas environment, UDOIT may identify accessibility concerns involving areas such as:</p><ul><li>Heading structure</li><li>Images and alternative text</li><li>Links</li><li>Tables</li><li>Color contrast</li><li>Lists</li><li>Other accessibility issues within course content</li></ul>
+<p>The results can help you identify where potential barriers exist and provide a starting point for remediation.</p>
+<h4>Review, Don't Just Fix</h4><p>When UDOIT identifies an issue, take time to understand why the item was flagged before making a correction.</p><p>Some accessibility issues have relatively straightforward solutions. Others require your judgment as the content creator.</p><p>For example, an automated tool may be able to identify that an image is missing alternative text, but it cannot necessarily determine what the appropriate alt text should say. That decision depends on the purpose and context of the image.</p><p>Similarly, a checker can identify certain structural problems, but it cannot determine whether your page is clearly organized or whether students can easily understand your instructions.</p>
+<h4>Automated Checkers Have Limitations</h4><p>An accessibility checker is an important tool, but a successful automated check does not guarantee that course content is fully accessible.</p><p>Some accessibility considerations require manual review, including:</p><ul><li>Whether alt text accurately communicates the purpose of an image.</li><li>Whether headings meaningfully describe sections of content.</li><li>Whether link text makes sense in context.</li><li>Whether information is organized clearly.</li><li>Whether captions and transcripts are accurate.</li><li>Whether complex visual information has an appropriate text alternative.</li><li>Whether the overall learning experience presents barriers that an automated tool cannot detect.</li></ul>
+<p>For this reason, combine automated testing with the accessibility practices you have learned throughout this course.</p>
+<h4>A Recommended Workflow</h4><p class="workflow">Create accessibly → Run UDOIT → Review the results → Remediate identified barriers → Manually review your content → Retest</p>
+<p>As you remediate your course, focus on improving the student experience, not simply reducing the number of errors reported by the tool.</p>
+<h4>Remember</h4><p>Accessibility checkers are most valuable when they help us understand and improve our content.</p><p>The goal is not simply to achieve a particular accessibility score or eliminate every warning. The goal is to create course content that students can access, navigate, understand, and use.</p>
+</div></details>
+
+</div></div></section>
+
+<section class="content-section" aria-labelledby="takeaways-heading"><div class="prose">
+<h2 id="takeaways-heading">Key Takeaways</h2><p>Accessible Bruin Learn content begins with intentional structure and design.</p><p>As you build your course:</p>
+<ul><li>Organize pages using meaningful headings and a logical hierarchy.</li><li>Break longer content into manageable sections.</li><li>Use built-in bulleted and numbered lists appropriately.</li><li>Maintain sufficient color contrast.</li><li>Never rely on color alone to communicate meaning.</li><li>Use descriptive links that make sense independently.</li><li>Provide appropriate alt text for images.</li><li>Structure data tables appropriately.</li><li>Provide captions and transcripts for media as applicable.</li><li>Use Ally to identify potential accessibility barriers.</li><li>Review Ally's feedback and make informed corrections rather than relying only on an accessibility score.</li><li>Remember that Ally Alternative Formats provide students with additional ways to access course content.</li></ul>
+<p>Creating accessible Bruin Learn content is not simply about correcting individual accessibility errors. It is about designing a course environment in which students can more easily navigate, understand, and engage with their learning.</p>
+</div></section>
+
+<section class="content-section" aria-labelledby="resources-heading"><div class="prose">
+<h2 id="resources-heading">Additional Resources</h2><ul><li><a href="https://dts.ucla.edu/initiatives/learning-technology-experience/access-bruin-learn">UCLA Digital &amp; Technology Solutions — Access Bruin Learn</a></li></ul>
+</div></section>
+
+<section class="content-section"><div class="support-banner"><div class="support-banner-text"><h2>Need accessibility help?</h2><p>Contact the accessibility team for guidance, consultation, or assistance.</p></div><a class="support-button" href="support.html">Get accessibility support</a></div></section>
+</main>
 <footer class="site-footer"><div class="footer-inner"><p>&copy; UCLA — Digital Accessibility</p><nav class="footer-nav" aria-label="Footer navigation"><ul><li><a href="accessibility.html">Accessibility</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div></footer>
 <script src="search.js" defer></script>
 </body></html>
