@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Guidance for accessible astronomy instruction, celestial imagery, star charts, spectra, light curves, data, and planetarium experiences." name="description"/>
+<title>Astronomy | UCLA Digital Accessibility</title>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+   .accessible-accordion { border: 1px solid #d5d5d5; border-radius: 4px; margin: 0 0 1rem; background: #fff; }
+.accessible-accordion summary { cursor: pointer; padding: 1rem 1.25rem; font-weight: 700; color: #005587; list-style-position: inside; }
+.accessible-accordion summary:focus-visible { outline: 3px solid #ffd100; outline-offset: 2px; }
+.accessible-accordion[open] summary { border-bottom: 1px solid #d5d5d5; }
+.accessible-accordion-content { padding: 1rem 1.25rem; }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">
+   Skip to main content
+  </a>
+<header class="site-header">
+<div class="header-inner">
+<a aria-label="UCLA Digital Accessibility home" class="site-brand" href="index.html">
+<img alt="UCLA" class="site-brand-logo" src="images/logo_UCLA_blue_boxed.png"/>
+<span class="site-brand-text">
+      Teaching and Learning Center
+      <small>
+       Resources and support
+      </small>
+</span>
+</a>
+<nav aria-label="Primary navigation" class="primary-nav">
+<ul>
+<li>
+<a href="index.html">
+        Home
+       </a>
+</li>
+<li>
+<a href="resources.html">
+        Resources
+       </a>
+</li>
+<li>
+<a href="training.html">
+        Training
+       </a>
+</li>
+<li>
+<a href="support.html">
+        Get Help
+       </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="site-search-row">
+<search class="site-search" role="search">
+<form action="search.html" method="get">
+<label for="site-search-input">
+       Search the site
+      </label>
+<input autocomplete="off" id="site-search-input" name="q" placeholder="Search the site" type="search"/>
+<button type="submit">
+       Search
+      </button>
+</form>
+</search>
+</div>
+</header>
+<section aria-labelledby="page-title" class="page-hero">
+<div class="page-hero-inner">
+<div class="breadcrumbs">
+<a href="index.html">
+      Home
+     </a>
+<span aria-hidden="true">
+      /
+     </span>
+<span>Astronomy</span>
+</div>
+<span class="eyebrow">
+     Digital Accessibility
+    </span>
+<h1 id="page-title">Accessible Astronomy</h1>
+<p>Create inclusive astronomy learning experiences with accessible visualizations, data, and observing activities.</p>
+</div>
+</section>
+<main id="main-content"><section aria-labelledby="overview-heading" class="content-section"><h2 id="overview-heading">Module Overview</h2><p>Astronomy courses use telescope photographs, star charts, spectra, light curves, sky simulations, and large data sets to explain objects and events beyond Earth. These resources often convey information through color, brightness, shape, motion, or spatial position. Students who cannot see a visualization, distinguish its colors, or operate an interactive tool may miss essential scientific information.</p><p>Accessible astronomy instruction makes the scientific meaning available through multiple formats: structured data, precise descriptions, tactile or sonified representations where appropriate, captions, and keyboard-accessible software. The goal is equivalent opportunity to investigate evidence and reason scientifically—not identical sensory experiences.</p><h3>Learning Objectives</h3><ul><li>Identify accessibility barriers in astronomical images, charts, and sky simulations.</li><li>Make astronomical images, charts, spectra, simulations, and spatial scientific information accessible through meaningful descriptions.</li><li>Write useful alternative text and long descriptions for celestial imagery and scientific figures.</li><li>Provide accessible data and explanations for spectra, light curves, and quantitative plots.</li><li>Design inclusive telescope observations and planetarium activities.</li><li>Evaluate astronomy software and interactive models for keyboard and assistive-technology access.</li><li>Communicate findings using accessible documents, presentations, and media.</li><li>Test final materials manually and with appropriate accessibility tools.</li></ul></section><section aria-labelledby="guidance-heading" class="content-section"><h2 id="guidance-heading">How to Make Astronomy Materials More Accessible</h2><details class="accessible-accordion"><summary>Start With the Scientific Learning Goal</summary><div class="accessible-accordion-content"><p>Identify what learners must understand: orbital motion, a spectrum’s absorption lines, stellar brightness changes, or relationships among celestial objects. Choose accessible representations that convey that evidence, rather than assuming a visual display is the only route to understanding.</p><p>Meaningful descriptions explain the scientific significance of astronomical images, charts, spectra, simulations, and spatial information. Identify important features, patterns, scales, relationships, and changes so learners can interpret the evidence without relying on the visual display alone.</p><ul><li>Explain the question the visualization answers and the relevant quantities.</li><li>Offer a text explanation or accessible data table alongside complex graphics.</li><li>Provide flexible ways to explore or report observations while maintaining the learning outcomes.</li></ul></div></details><details class="accessible-accordion"><summary>Telescope Images and Astronomical Photography</summary><div class="accessible-accordion-content"><p>Telescope images may encode data using false color, filters, exposure choices, and image processing. A picture’s colors may not represent what a human eye would see. Explain the scientific meaning of the processing.</p><ul><li>Provide concise alt text identifying the object and the central observation.</li><li>For complex images, provide a longer description covering structure, location, comparison, scale, and notable features.</li><li>Identify filters, wavelengths, orientation, and scale when relevant.</li><li>Do not depend on color alone to distinguish regions or features.</li></ul></div></details><details class="accessible-accordion"><summary>Star Charts, Celestial Maps, and Constellations</summary><div class="accessible-accordion-content"><p>Star charts use coordinates, symbols, brightness scales, and orientation to convey the sky. Give learners alternatives that communicate the same relationships without requiring visual recognition of a chart.</p><ul><li>Label major stars and objects; explain coordinate systems and direction.</li><li>Provide a structured list of object names, positions, and magnitudes when those values matter.</li><li>Use symbols, line styles, and text labels in addition to color.</li><li>Describe how a constellation or group of objects is arranged relative to reference points.</li></ul></div></details><details class="accessible-accordion"><summary>Spectra and Spectroscopy</summary><div class="accessible-accordion-content"><p>Spectra may display intensity against wavelength or frequency, with absorption or emission features that indicate physical properties. Color-coded spectral images need textual and numeric equivalents.</p><ul><li>State the axes, units, range, and meaning of peaks or dips.</li><li>Provide an accessible table of significant wavelengths and measurements.</li><li>Describe key trends and comparisons, not just the chart appearance.</li><li>Differentiate plotted series with labels and line patterns as well as color.</li></ul></div></details><details class="accessible-accordion"><summary>Light Curves and Time-Series Data</summary><div class="accessible-accordion-content"><p>Light curves can reveal transits, eclipses, variable stars, or other changes in brightness over time. Their scientific meaning should remain available without interpreting a line by sight alone.</p><ul><li>Provide the plotted values in a well-structured table or downloadable accessible format.</li><li>Describe the overall trend, periodicity, significant minima/maxima, and uncertainty.</li><li>Identify axes and units; explain magnitude scales when applicable.</li><li>Use distinct line styles and point markers for multiple data series.</li></ul></div></details><details class="accessible-accordion"><summary>Accessible Scientific Data, Tables, and Calculations</summary><div class="accessible-accordion-content"><p>Astronomy instruction often involves catalogs, spreadsheets, measurements, and code. Organize these resources so students can understand and manipulate the data with assistive technology.</p><ul><li>Use descriptive column headings, units, and clear file names.</li><li>Avoid merged cells and color-only coding in tables.</li><li>Explain equations in surrounding text and use accessible math formats when possible.</li><li>Provide accessible alternatives to plots or code outputs that only appear as images.</li></ul></div></details><details class="accessible-accordion"><summary>Interactive Sky Simulations and Astronomy Software</summary><div class="accessible-accordion-content"><p>Planetarium apps and sky viewers may rely on dragging, hover, color, or visual spatial navigation. Accessibility varies by product and version, so evaluate the actual student tasks.</p><ul><li>Check keyboard navigation, visible focus, control names, zoom behavior, and screen-reader output.</li><li>Provide labeled screenshots with descriptions or step-by-step text alternatives when necessary.</li><li>Offer object lists, coordinates, or narrated demonstrations for inaccessible views.</li><li>Avoid requiring a precise mouse gesture as the only way to complete an activity.</li></ul></div></details><details class="accessible-accordion"><summary>Telescope Observations and Laboratory Activities</summary><div class="accessible-accordion-content"><p>Observing sessions can create barriers through darkness, equipment controls, time pressure, and reliance on sight. Plan inclusive participation before the session.</p><ul><li>Describe equipment, setup, targets, and expected observations in advance.</li><li>Offer accessible data sets or remote-observation records when direct use is not possible.</li><li>Make instructions and safety information available in accessible formats.</li><li>Allow equivalent ways to analyze and document observational evidence.</li></ul></div></details><details class="accessible-accordion"><summary>Planetarium Shows, Motion, and Multimedia</summary><div class="accessible-accordion-content"><p>Dome projections and animated journeys through space can convey important visual information without narration. Motion and flashing effects can also create barriers.</p><ul><li>Narrate essential visual changes and spatial relationships.</li><li>Caption spoken content and provide transcripts for recorded materials.</li><li>Provide an accessible summary or alternative learning activity when visual immersion is essential to the format.</li><li>Avoid unnecessary flashing and allow learners to pause or replay digital animations.</li></ul></div></details><details class="accessible-accordion"><summary>Color, Contrast, and Visual Encodings</summary><div class="accessible-accordion-content"><p>Astronomy uses heat maps, false-color images, redshift maps, and multi-wavelength composites. These encodings must be explained and not be the sole carrier of meaning.</p><ul><li>Use readable labels, strong contrast, and legends with clear units.</li><li>Add patterns, symbols, or annotations when comparing categories.</li><li>Explain how colors map to physical quantities or wavelengths.</li><li>Check visuals at projected, mobile, and magnified sizes.</li></ul></div></details><details class="accessible-accordion"><summary>Sonification, Tactile Graphics, and Multisensory Alternatives</summary><div class="accessible-accordion-content"><p>Data sonification maps values to sound; tactile graphics communicate selected shapes or spatial relationships through touch. These can be useful complementary approaches but require clear legends and explanation.</p><ul><li>Explain exactly which variable maps to pitch, volume, rhythm, or tactile feature.</li><li>Pair multisensory representations with text and data tables.</li><li>Avoid assuming every learner can use audio or touch; provide choices.</li><li>Test whether the representation preserves the intended scientific interpretation.</li></ul></div></details><details class="accessible-accordion"><summary>Accessible Assignments, Presentations, and Quality Assurance</summary><div class="accessible-accordion-content"><p>Accessible instruction includes the way students receive tasks, collaborate, present findings, and submit work. Evaluate the final formats students actually use.</p><ul><li>Provide accessible assignment instructions and grading rubrics.</li><li>Use structured headings, meaningful links, captions, and descriptive alt text.</li><li>Check exported PDFs and slide decks separately from their source files.</li><li>Combine automated checks with keyboard and assistive-technology review.</li></ul></div></details></section><section aria-labelledby="key-heading" class="content-section"><h2 id="key-heading">Key Takeaways</h2><ul><li>Describe the scientific meaning of astronomical visuals, not only their appearance.</li><li>Make astronomical images, charts, spectra, simulations, and spatial scientific information accessible through meaningful descriptions of their scientific content.</li><li>Pair complex images, maps, spectra, and light curves with descriptions and structured data.</li><li>Explain false-color encodings, units, coordinates, and visual conventions.</li><li>Provide accessible ways to participate in observations, simulations, and planetarium activities.</li><li>Use captions, transcripts, and alternatives to inaccessible interactions.</li><li>Review the actual student workflow and final files; automation alone cannot verify full access.</li></ul></section><section aria-labelledby="resources-heading" class="content-section"><h2 id="resources-heading">Additional Resources</h2><p>Use these resources as starting points and check the accessibility of the specific astronomy tools used in your course.</p><ul><li><a href="https://www.w3.org/WAI/tutorials/images/complex/">W3C: Complex Images</a></li><li><a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html">W3C: Understanding Use of Color</a></li><li><a href="https://www.w3.org/WAI/media/av/">W3C: Making Audio and Video Media Accessible</a></li><li><a href="https://www.nasa.gov/">NASA</a> — astronomy imagery, data, and educational materials; review individual resources for accessibility.</li><li><a href="https://teaching.ucla.edu/">UCLA Teaching and Learning Center</a></li></ul></section><section class="content-section"><div class="support-banner"><div class="support-banner-text"><h2>Need accessibility help?</h2><p>Contact the accessibility team for guidance, consultation, or assistance.</p></div><a class="support-button" href="support.html">Get accessibility support</a></div></section></main>
+<footer class="site-footer">
+<div class="footer-inner">
+<p>
+     © UCLA — Digital Accessibility
+    </p>
+<nav aria-label="Footer navigation" class="footer-nav">
+<ul>
+<li>
+<a href="accessibility.html">
+        Accessibility
+       </a>
+</li>
+<li>
+<a href="privacy.html">
+        Privacy
+       </a>
+</li>
+<li>
+<a href="contact.html">
+        Contact
+       </a>
+</li>
+</ul>
+</nav>
+</div>
+</footer>
+<script defer="" src="search.js">
+</script>
+</body>
+</html>
