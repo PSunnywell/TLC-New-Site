@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Guidance for making GIS maps, spatial data, dashboards, and geographic visualizations accessible." name="description"/>
+<title>GIS and Accessible Spatial Data | UCLA Digital Accessibility</title>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+   .accessible-accordion { border: 1px solid #d5d5d5; border-radius: 4px; margin: 0 0 1rem; background: #fff; }
+.accessible-accordion summary { cursor: pointer; padding: 1rem 1.25rem; font-weight: 700; color: #005587; list-style-position: inside; }
+.accessible-accordion summary:focus-visible { outline: 3px solid #ffd100; outline-offset: 2px; }
+.accessible-accordion[open] summary { border-bottom: 1px solid #d5d5d5; }
+.accessible-accordion-content { padding: 1rem 1.25rem; }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">
+   Skip to main content
+  </a>
+<header class="site-header">
+<div class="header-inner">
+<a aria-label="UCLA Digital Accessibility home" class="site-brand" href="index.html">
+<img alt="UCLA" class="site-brand-logo" src="images/logo_UCLA_blue_boxed.png"/>
+<span class="site-brand-text">
+      Teaching and Learning Center
+      <small>
+       Resources and support
+      </small>
+</span>
+</a>
+<nav aria-label="Primary navigation" class="primary-nav">
+<ul>
+<li>
+<a href="index.html">
+        Home
+       </a>
+</li>
+<li>
+<a href="resources.html">
+        Resources
+       </a>
+</li>
+<li>
+<a href="training.html">
+        Training
+       </a>
+</li>
+<li>
+<a href="support.html">
+        Get Help
+       </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="site-search-row">
+<search class="site-search" role="search">
+<form action="search.html" method="get">
+<label for="site-search-input">
+       Search the site
+      </label>
+<input autocomplete="off" id="site-search-input" name="q" placeholder="Search the site" type="search"/>
+<button type="submit">
+       Search
+      </button>
+</form>
+</search>
+</div>
+</header>
+<section aria-labelledby="page-title" class="page-hero">
+<div class="page-hero-inner">
+<div class="breadcrumbs">
+<a href="index.html">
+      Home
+     </a>
+<span aria-hidden="true">
+      /
+     </span>
+<span>GIS and Spatial Data</span>
+</div>
+<span class="eyebrow">
+     Digital Accessibility
+    </span>
+<h1 id="page-title">Accessible GIS and Spatial Data</h1>
+<p>Create accessible maps, geospatial visualizations, and data dashboards that communicate meaningful spatial information.</p>
+</div>
+</section>
+<main id="main-content"><section aria-labelledby="overview-heading" class="content-section"><h2 id="overview-heading">Module Overview</h2><p>Geographic information systems (GIS) use maps, layers, symbols, geographic coordinates, and interactive controls to communicate spatial relationships. Students may need to interpret locations, compare regions, investigate patterns, and analyze geographic data. An accessible learning experience should not require vision, color discrimination, or mouse-only interaction to understand the essential information.</p><p>This module adapts the accessibility practices in UCLA Teaching and Learning Center’s <em>Creating Accessible Tableau Dashboards</em> checklist to GIS and geospatial instruction. Tableau-specific steps are labeled as such; the source PDF does not provide software-specific instructions for ArcGIS, QGIS, or other GIS applications.</p><h3>Learning Objectives</h3><ul><li>Identify keyboard and screen-reader barriers in maps and dashboards.</li><li>Provide structured data and meaningful descriptions of geographic patterns and spatial relationships.</li><li>Use accessible map labels, legends, symbols, and color contrast.</li><li>Test focus order, zoom, responsive layouts, and interactive controls.</li><li>Design alternatives to hover-only features, dense visualizations, and inaccessible map interactions.</li><li>Evaluate the published map and data using manual accessibility checks.</li></ul></section><section aria-labelledby="guidance-heading" class="content-section"><h2 id="guidance-heading">How to Make GIS and Spatial Visualizations More Accessible</h2><details class="accessible-accordion"><summary>Keyboard Access and Supplemental Data</summary><div class="accessible-accordion-content"><p><strong>Checklist reference: </strong>2.1.1 Keyboard; 1.3.1 Info and Relationships</p><ul><li>Test whether students can reach and operate map controls, filters, layers, and data marks using only a keyboard.</li><li>The Tableau checklist recommends providing a properly structured supplemental data table when marks cannot be navigated reliably. Include clear column headers, a caption, and a link or accessible view alongside the visualization.</li><li>In Tableau, test the View Data option and its keyboard access; do not assume the same shortcut or functionality applies to other GIS products.</li></ul></div></details><details class="accessible-accordion"><summary>Avoid Hover-Only Interactions and Keyboard Traps</summary><div class="accessible-accordion-content"><p><strong>Checklist reference: </strong>2.1.1 Keyboard; 2.1.2 No Keyboard Trap</p><ul><li>Do not make important information available only by hovering over map features or chart marks. Provide keyboard-operable alternatives.</li><li>Test embedded maps and dashboards to ensure users can move focus into and out of them. An iframe may require focus-management work by the developer.</li><li>Ensure interactive map controls have accessible names and visible focus.</li></ul></div></details><details class="accessible-accordion"><summary>Logical Focus Order and Screen-Reader Testing</summary><div class="accessible-accordion-content"><p><strong>Checklist reference: </strong>2.4.3 Focus Order; 1.1.1 Non-Text Content</p><ul><li>Check that the first Tab reaches the first expected interactive element and subsequent Tab presses follow a logical sequence.</li><li>The source checklist identifies Tableau Dashboard &gt; Tab Order as a place to configure order. Other GIS products have different controls.</li><li>Test the final published visualization with NVDA on Windows or VoiceOver on macOS; verify whether map data and controls can actually be understood.</li></ul></div></details><details class="accessible-accordion"><summary>Color Contrast and Non-Color Cues</summary><div class="accessible-accordion-content"><p><strong>Checklist reference: </strong>1.4.3 Contrast; 1.4.11 Non-Text Contrast; 1.4.1 Use of Color</p><ul><li>Aim for at least 4.5:1 contrast for normal text and 3:1 for necessary graphical objects and controls, as described in the source checklist.</li><li>Do not encode spatial categories, risk levels, or trends with color alone. Pair color with patterns, symbols, line styles, or explicit labels.</li><li>Check choropleth legends and map symbols in grayscale and under color-vision simulations. Shading used to distinguish rows or regions must remain legible.</li></ul></div></details><details class="accessible-accordion"><summary>Descriptive Map Titles, Labels, and Long Descriptions</summary><div class="accessible-accordion-content"><p><strong>Checklist reference: </strong>2.4.6 Headings and Labels; 1.3.1 Info and Relationships; 1.1.1 Non-Text Content</p><ul><li>Give each map or dashboard a descriptive title. Label axes and quantitative units when charts are present.</li><li>Place labels near geographic features or data marks where practical; use callouts if labels will not fit. Do not rely on an unexplained color legend alone.</li><li>Provide a long description explaining the map purpose, spatial patterns, major comparisons, relevant locations, and key conclusions.</li></ul></div></details><details class="accessible-accordion"><summary>Responsive Layout, Typography, and Spacing</summary><div class="accessible-accordion-content"><p><strong>Checklist reference: </strong>1.4.4 Resize Text; 1.4.12 Text Spacing; source best practices</p><ul><li>At 200% browser zoom, check for clipped text, overlapping labels, missing controls, and content disappearing from view. Also test narrower viewport widths.</li><li>The source recommends readable sans-serif text, at least 12 pt (16 px), mixed-case labels, and adequate padding and white space.</li><li>For Tableau labels, check that Allow labels to overlap other marks is off; use leader lines where appropriate.</li></ul></div></details><details class="accessible-accordion"><summary>Targets, Animation, and Dense Data Marks</summary><div class="accessible-accordion-content"><p><strong>Checklist reference: </strong>2.5.8 Target Size; 2.2.2 Pause, Stop, Hide; source best practices</p><ul><li>Ensure clickable features and controls have sufficient target size and spacing; the source references 24-pixel targets.</li><li>Allow users to disable or pause animations. Ensure changing information is available in text and announced appropriately when necessary.</li><li>The Tableau checklist warns that views with over 1,000 marks may be rendered as static images. Reduce or aggregate marks and offer the underlying data instead of assuming every dense visualization is accessible.</li></ul></div></details><details class="accessible-accordion"><summary>Accessible Data Downloads and Map Alternatives</summary><div class="accessible-accordion-content"><p><strong>Checklist reference: </strong>1.1.1 Non-Text Content; 1.3.1 Info and Relationships</p><ul><li>Provide a structured data table and downloadable underlying data (for example CSV or Excel) when suitable.</li><li>For GIS-specific maps, identify coordinate systems, locations, geographic units, and relationships in accompanying text or structured data. This is an application of the checklist principles, not a GIS-specific instruction from the PDF.</li><li>A data download alone does not communicate every spatial relationship: pair it with a meaningful written summary of geographic patterns.</li></ul></div></details><details class="accessible-accordion"><summary>Dashboard Organization and Captions</summary><div class="accessible-accordion-content"><p><strong>Checklist reference: </strong>Source best practices</p><ul><li>Limit dashboard complexity. The source recommends about three to four worksheets in a Tableau dashboard.</li><li>Provide a plain-language summary of trends and insights; the checklist notes Tableau Worksheet &gt; Show Caption.</li><li>Use descriptive links rather than displaying bare URLs; include an accessibility contact method for issues with the published visualization.</li></ul></div></details><details class="accessible-accordion"><summary>Test and Publish the Final Experience</summary><div class="accessible-accordion-content"><p><strong>Checklist reference: </strong>Combined source checklist practices</p><ul><li>Test the exact published map or dashboard with keyboard-only navigation, screen readers, browser zoom, grayscale, and narrow screens.</li><li>Check interactive features, filtering, focus, text labels, and access to equivalent data—not merely whether the page passes an automated checker.</li><li>When software cannot provide equivalent access to a task, supply an alternative that meets the same instructional objective.</li></ul></div></details></section><section aria-labelledby="takeaways-heading" class="content-section"><h2 id="takeaways-heading">Key Takeaways</h2><ul><li>Maps and dashboards need keyboard-operable controls and logical focus order.</li><li>Provide accessible underlying data and meaningful descriptions of geographic relationships and patterns.</li><li>Do not rely on color, hover, or graphical marks as the only way to obtain information.</li><li>Use descriptive labels, adequate contrast, readable text, and responsive layouts.</li><li>Test the final published visualization manually with assistive technologies.</li><li>Tableau-specific menu paths and rendering limitations in the source should not be assumed to apply to other GIS software.</li></ul></section><section aria-labelledby="resources-heading" class="content-section"><h2 id="resources-heading">Additional Resources</h2><p><strong>Primary source:</strong> UCLA Teaching and Learning Center, <em>Creating Accessible Tableau Dashboards</em> (four-page accessibility checklist supplied for this page).</p><ul><li><a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 Quick Reference</a></li><li><a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a></li><li><a href="https://www.w3.org/WAI/tutorials/images/complex/">W3C: Complex Images and Long Descriptions</a></li><li><a href="https://www.w3.org/WAI/test-evaluate/">W3C: Evaluating Web Accessibility</a></li></ul><p>Additional tools named in the source include a color-contrast matrix generator and a colorblindness emulator. Verify tool availability and suitability before recommending a particular extension.</p></section><section class="content-section"><div class="support-banner"><div class="support-banner-text"><h2>Need accessibility help?</h2><p>Contact the accessibility team for guidance, consultation, or assistance.</p></div><a class="support-button" href="support.html">Get accessibility support</a></div></section></main>
+<footer class="site-footer">
+<div class="footer-inner">
+<p>
+     © UCLA — Digital Accessibility
+    </p>
+<nav aria-label="Footer navigation" class="footer-nav">
+<ul>
+<li>
+<a href="accessibility.html">
+        Accessibility
+       </a>
+</li>
+<li>
+<a href="privacy.html">
+        Privacy
+       </a>
+</li>
+<li>
+<a href="contact.html">
+        Contact
+       </a>
+</li>
+</ul>
+</nav>
+</div>
+</footer>
+<script defer="" src="search.js">
+</script>
+</body>
+</html>
