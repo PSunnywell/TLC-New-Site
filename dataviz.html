@@ -15,6 +15,7 @@
 .accessible-accordion-content { padding: 1rem 1.25rem; }
   </style>
 </head>
+
 <body>
 <a class="skip-link" href="#main-content">
    Skip to main content
@@ -69,17 +70,16 @@
 </search>
 </div>
 </header>
-<section aria-labelledby="page-title" class="page-hero">
-<div class="page-hero-inner">
-<div class="breadcrumbs">
-<a href="index.html">
-      Home
-     </a>
-<span aria-hidden="true">
-      /
-     </span>
-<span>Data Visualizations and Tableau</span>
-</div>
+
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="page-hero-inner">
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="accessible-course-materials1004.html">Accessible Course Materials</a>
+      <span aria-hidden="true">/</span>
+      <span>Data Visualizations and Tableau</span>
+    </div>
 <span class="eyebrow">
      Digital Accessibility
     </span>
@@ -87,13 +87,15 @@
 <p>Design dashboards and data visualizations that are navigable, understandable, and usable with assistive technology.</p>
 </div>
 </section>
-<main id="main-content"><section aria-labelledby="overview-heading" class="content-section">
-<h2 id="overview-heading">Module Overview</h2>
-<p>Data visualizations communicate patterns, comparisons, and trends, but visual presentation alone may exclude people who navigate by keyboard, use a screen reader, magnify content, or cannot distinguish colors. This guidance is adapted from the UCLA Teaching and Learning Center’s <em>Creating Accessible Tableau Dashboards</em> checklist. It focuses on Tableau dashboards and on accessibility practices relevant to other digital charts and visualizations.</p>
-<p>Accessibility requires both an understandable visualization and an equivalent way to access the underlying information. A well-structured supplemental data table, a description of key findings, and a usable interaction sequence are important complements to visual design.</p>
-<h3>Learning Objectives</h3>
-<ul><li>Evaluate keyboard access, focus order, and possible keyboard traps in dashboards.</li><li>Provide structured data tables and accessible downloads as alternatives to visual marks.</li><li>Test visualizations with screen readers and keyboard-only navigation.</li><li>Apply appropriate contrast, labeling, and non-color distinctions.</li><li>Write meaningful chart descriptions and summaries of trends and findings.</li><li>Check zoom, spacing, target sizes, animation, and dashboard complexity.</li><li>Review and publish a dashboard with an accessible surrounding page.</li></ul>
-</section><section aria-labelledby="guidance-heading" class="content-section"><h2 id="guidance-heading">Creating Accessible Tableau Dashboards</h2>
+ <main id="main-content">
+   <section aria-labelledby="overview-heading" class="content-section">
+    <div class="section-heading">
+     <h2 id="overview-heading">
+      Overview
+     </h2>
+    </div>
+
+<section aria-labelledby="guidance-heading" class="content-section"><h2 id="guidance-heading">Creating Accessible Tableau Dashboards</h2>
 <details class="accessible-accordion"><summary>Keyboard Navigation and Supplemental Data Tables</summary><div class="accessible-accordion-content"><p><strong>Checklist references:</strong> WCAG 2.1.1 Keyboard; 1.3.1 Info and Relationships.</p><p>Test whether the dashboard and its marks can be explored using only a keyboard. When keyboard access to marks is limited, provide an equivalent, navigable HTML data table with properly marked headers and a caption describing its purpose.</p><ul><li>Check whether Tableau’s <strong>View Data</strong> option is available and usable; the source checklist describes a Ctrl+Shift+Enter access method. Verify the shortcut in the deployed Tableau version.</li><li>Link directly to the supplemental table, or offer clearly labeled visualization and data-table views.</li><li>Data-mark-heavy visualizations can be especially difficult to explore using arrow keys. Do not rely on the marks alone.</li></ul></div></details>
 <details class="accessible-accordion"><summary>Hover Interactions and Keyboard Traps</summary><div class="accessible-accordion-content"><p><strong>Checklist references:</strong> WCAG 2.1.1 Keyboard; 2.1.2 No Keyboard Trap.</p><p>Avoid interactions that reveal required information only on mouse hover. Test whether keyboard users can enter and leave every interactive dashboard region.</p><p>Embedded Tableau views may need special focus management in their surrounding webpage. The source checklist includes an illustrative iframe and focus-anchor pattern; do not paste that sample unchanged into production. Test any embedding solution with the actual Tableau version and assistive technology.</p></div></details>
 <details class="accessible-accordion"><summary>Logical Tab Order and Screen-Reader Testing</summary><div class="accessible-accordion-content"><p><strong>Checklist references:</strong> WCAG 2.4.3 Focus Order; 1.1.1 Non-Text Content.</p><ul><li>Confirm the first Tab reaches the expected interactive element and subsequent focus follows a meaningful order.</li><li>For Tableau, review <strong>Dashboard → Tab Order</strong>, as described in the checklist.</li><li>Test with NVDA on Windows or VoiceOver on macOS, including titles, controls, data access, and navigation.</li></ul></div></details>
